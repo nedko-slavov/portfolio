@@ -130,16 +130,14 @@
   background-color: var(--brand);
   transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 16px 16px 0 0;
 
-  h4 {
+  .company-name {
     color: var(--true-white);
   }
 
   .projects-row {
     display: block;
-    padding: 1em;
-    margin: 0 auto;
-    width: 90%;
     overflow-x: auto;
     white-space: nowrap;
   }
@@ -147,10 +145,12 @@
   .projects-wrapper {
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
 
     &:before,
     &:after {
-      display: block;
+      display: none;
       position: absolute;
       top: 0;
       z-index: 1;

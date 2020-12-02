@@ -20,11 +20,10 @@ export default () => (
 
             <div className="employer-info">
               <div className="spacing-both">
-                <div className="spacing-bottom-sm">
-                  <h4>Studio Raketa Projects</h4>
-                </div>
-                
                 <div className="projects-wrapper">
+                  <div className="spacing-bottom-sm">
+                    <h4 className="company-name">Studio Raketa Projects</h4>
+                  </div>
                   <div className="projects-row">
                     <a href="#" className="project">
                       <img src="https://picsum.photos/400/300" alt=""/>
