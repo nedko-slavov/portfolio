@@ -1,11 +1,15 @@
 export default () => (
   <div className="employment-history">
     <div className="container spacing-both-lg">
-      <h4 className="section-title">Employment History</h4>
+      <div className="spacing-bottom">
+        <h4 className="section-title">Employment History</h4>
+      </div>
 
       <div className="row spacing-top-sm">
         <div className="col-4">
           <div className="employer-info-wrapper">
+            {/* <div className="eye-icon" /> */}
+
             <p className="card short-info">
               <strong>Employer:</strong> Studio Raketa
               <br/>
@@ -15,7 +19,7 @@ export default () => (
             </p>
 
             <div className="employer-info">
-              <div className="container spacing-both">
+              <div className="spacing-both">
                 <div className="spacing-bottom-sm">
                   <h4>Studio Raketa Projects</h4>
                 </div>

@@ -10,7 +10,7 @@ export default () => (
           </div>
         </div>
 
-        <div className="col-9">
+        <div className="col-9 lead-text">
           <h3>Nedko Slavov</h3>
           <div className="row">
             <div className="col-6">
