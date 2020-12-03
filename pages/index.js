@@ -5,10 +5,16 @@ import EmploymentHistory from '../components/EmploymentHistory.js';
 
 export default () => (
   <React.Fragment>
-    <LeadContainer />
+    <div className="notification spacing-top-lg">
+      <h4>Under construction</h4>
+    </div>
 
-    <Skills />
-    
-    <EmploymentHistory />
+    <main className="main">
+      <LeadContainer />
+
+      <Skills />
+      
+      <EmploymentHistory />
+    </main>
   </React.Fragment>
 );

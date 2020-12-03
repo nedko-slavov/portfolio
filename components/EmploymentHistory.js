@@ -25,7 +25,19 @@ export default () => (
                   <div className="spacing-bottom-sm">
                     <h4 className="company-name">Studio Raketa Projects</h4>
                   </div>
+
                   <div className="projects-row">
+                    <div className="project">
+                      <a href="https://github.com/studioraketa/raketa-cms" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/raketa-cms.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Raketa CMS</h5>
+                        <p>Raketa company product <br/> All projects below are builded with Raketa CMS</p>
+                      </div>
+                    </div>
+                    
                     <div className="project">
                       <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
                         <img src="../static/images/chaos.jpg" alt="" />
@@ -111,18 +123,17 @@ export default () => (
                       <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
                         <img src="../static/images/copycom.jpg" alt="" />
                       </a>
+
+
+                      <div className="project-info">
+                        <h5>Copycom</h5>
+                        <p></p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* <ul>
-              <li><strong>Products:</strong> <a href="https://github.com/studioraketa/raketa-cms" target="_blank" rel="noopener noreferrer">Raketa Cms</a></li>
-              <li>
-                <strong>Projects build with Raketa Cms:</strong>
-              </li>
-            </ul> */}
           </div>
         </div>
 
@@ -137,13 +148,27 @@ export default () => (
             </p>
 
             <div className="employer-info">
-              <div className="container">
-                <h4>Netea</h4>
+              <div className="spacing-both">
+                <div className="projects-wrapper">
+                  <div className="spacing-bottom-sm">
+                    <h4 className="company-name">Netea</h4>
+                  </div>
+
+                  <div className="projects-row">
+                    <div className="project">
+                        <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer">
+                          <img src="../static/images/lecturio.jpg" alt="" />
+                        </a>
+
+                        <div className="project-info">
+                            <h5>Lecturio</h5>
+                          <p></p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
-            {/* <ul>
-              <li><strong>Projects:</strong> <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer">Lecturio</a></li>
-            </ul> */}
           </div>
         </div>
 
@@ -158,13 +183,39 @@ export default () => (
             </p>
 
             <div className="employer-info">
-              <div className="container">
-                <h4>Avalith</h4>
+              <div className="spacing-both">
+                <div className="projects-wrapper">
+                  <div className="spacing-bottom-sm">
+                    <h4 className="company-name">Avalith</h4>
+                  </div>
+
+                  <div className="projects-row">
+                    <div className="project">
+                      <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/historypin.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                          <h5>Historypin</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div className="project">
+                      <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/zagorcacompany.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Zagorka Company</h5>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            {/* <ul>
-              <li><strong>Projects:</strong> <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">Historypin</a>, <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">Zagorka Company</a></li>
-            </ul> */}
+
           </div>
         </div>
       </div>

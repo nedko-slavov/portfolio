@@ -128,3 +128,17 @@ blockquote {
 .muted {
   opacity: 0.8;
 }
+
+.main {
+  @include bp($bp-mobile) {
+    display: none;
+  }
+}
+
+.notification {
+  text-align: center;
+
+  @include bp($bp-desktop) {
+    display: none;
+  }
+}
