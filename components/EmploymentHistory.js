@@ -73,7 +73,7 @@ export default () => (
                     </div>
                   
                     <div className="project">
-                      <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer" className="project">
+                      <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">
                         <img src="../static/images/smartcom.jpg" alt="" />
                       </a>
 
