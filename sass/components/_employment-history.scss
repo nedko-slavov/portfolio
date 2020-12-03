@@ -167,6 +167,10 @@
 
   .row:nth-child(2n + 1) {
     [class*="col"] {
+      .short-info:hover {
+        cursor: default;
+      }
+
       &:nth-child(1) {
         .card {
           animation: border 10s linear 30s infinite alternate;
@@ -227,8 +231,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: bounce 3s linear infinite alternate;
 
-  transform: translateY(calc(-100% + 30px));
-
   .company-name {
     color: var(--brand);
   }
@@ -282,11 +284,13 @@
 
     img {
       display: block;
+      width: 100%;
       border-radius: 4px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
     .project-info {
+      width: 30%;
       padding-left: var(--spacing-sm);
     }
   }
