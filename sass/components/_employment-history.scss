@@ -40,10 +40,10 @@
   position: relative;
   z-index: 4;
   transform: translateY(100vh);
-  // animation: translate 2s forwards linear 6s 1 normal;
+  animation: translate 2s forwards linear 6s 1 normal;
 
-  opacity: 1;
-  transform: translateY(0);
+  // opacity: 1;
+  // transform: translateY(0);
 
   &:before {
     display: block;
