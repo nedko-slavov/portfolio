@@ -27,35 +27,35 @@ export default () => (
                   </div>
                   <div className="projects-row">
                     <a href="https://www.chaosgroup.com" className="project" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/chaos.png" alt="" />
+                      <img src="../static/images/chaos.jpg" alt="" />
                     </a>
                   
                     <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/smokini.png" alt="" />
+                      <img src="../static/images/smokini.jpg" alt="" />
                     </a>
                   
                     <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/touchawsome.png" alt="" />
+                      <img src="../static/images/touchawsome.jpg" alt="" />
                     </a>
                   
                     <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/smartcom.png" alt="" />
+                      <img src="../static/images/smartcom.jpg" alt="" />
                     </a>
                   
                     <a href="https://konek.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/konek.png" alt="" />
+                      <img src="../static/images/konek.jpg" alt="" />
                     </a>
                     
                     <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/podaraci.png" alt="" />
+                      <img src="../static/images/podaraci.jpg" alt="" />
                     </a>
 
                     <a href="https://differentina.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/differentina.png" alt="" />
+                      <img src="../static/images/differentina.jpg" alt="" />
                     </a>
 
                     <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/copycom.png" alt="" />
+                      <img src="../static/images/copycom.jpg" alt="" />
                     </a>
                   </div>
                 </div>
