@@ -26,37 +26,92 @@ export default () => (
                     <h4 className="company-name">Studio Raketa Projects</h4>
                   </div>
                   <div className="projects-row">
-                    <a href="https://www.chaosgroup.com" className="project" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/chaos.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/chaos.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Chaos Group</h5>
+                        <p>Main client of the company</p>
+                      </div>
+                    </div>
                   
-                    <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/smokini.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/smokini.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Smokini</h5>
+                        <p></p>
+                      </div>
+                    </div>
                   
-                    <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/touchawsome.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/touchawsome.jpg" alt="" />
+                      </a>
+
+
+                      <div className="project-info">
+                        <h5>Touchawesome</h5>
+                        <p></p>
+                      </div>
+                    </div>
                   
-                    <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/smartcom.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer" className="project">
+                        <img src="../static/images/smartcom.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Smartcom</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
                   
-                    <a href="https://konek.bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/konek.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/konek.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Konek</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
                     
-                    <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/podaraci.jpg" alt="" />
-                    </a>
+                    <div className="project">
+                      <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/podaraci.jpg" alt="" />
+                      </a>
 
-                    <a href="https://differentina.com" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/differentina.jpg" alt="" />
-                    </a>
+                      <div className="project-info">
+                        <h5>Уникални Подаръци</h5>
+                        <p></p>
+                      </div>
+                    </div>
 
-                    <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer" className="project">
-                      <img src="../static/images/copycom.jpg" alt="" />
-                    </a>
+
+                    <div className="project">
+                      <a href="https://differentina.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/differentina.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Differentina</h5>
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <div className="project">
+                      <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
+                        <img src="../static/images/copycom.jpg" alt="" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -40,10 +40,10 @@
   position: relative;
   z-index: 4;
   transform: translateY(100vh);
-  animation: translate 2s forwards linear 6s 1 normal;
+  // animation: translate 2s forwards linear 6s 1 normal;
 
-  // opacity: 1;
-  // transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 
   &:before {
     display: block;
@@ -217,7 +217,7 @@
   top: -40px;
   margin: 0 auto;
   width: 980px;
-  min-height: 400px;
+  height: 400px;
   opacity: 0;
   z-index: -1;
   color: var(--true-white);
@@ -227,7 +227,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: bounce 3s linear infinite alternate;
 
-  // transform: translateY(calc(-100% + 30px));
+  transform: translateY(calc(-100% + 30px));
 
   .company-name {
     color: var(--brand);
@@ -235,14 +235,13 @@
 
   .projects-row {
     display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow-y: auto;
+    height: 400px;
     padding: 1em 0;
   }
 
   .projects-wrapper {
     position: relative;
-    overflow: hidden;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 
@@ -271,21 +270,25 @@
   }
 
   .project {
-    display: inline-block;
+    display: flex;
     position: relative;
     overflow: hidden;
-    width: 350px;
-    margin-right: 1em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    margin-bottom: var(--spacing-md);
+    color: var(--brand);
 
-    &:last-of-type {
-      margin-right: 0;
+    a {
+      display: block;
+      width: 70%;
     }
 
     img {
       display: block;
-      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-info {
+      padding-left: var(--spacing-sm);
     }
   }
 }
