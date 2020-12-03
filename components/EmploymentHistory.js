@@ -1,5 +1,8 @@
 export default () => (
   <div className="employment-history">
+    <div className="slot-wrapper" />
+    <div className="slot-shadow" />
+    
     <div className="container spacing-both-lg">
       <div className="spacing-bottom">
         <h4 className="section-title">Employment History</h4>
@@ -8,8 +11,6 @@ export default () => (
       <div className="row spacing-top-sm">
         <div className="col-4">
           <div className="employer-info-wrapper">
-            {/* <div className="eye-icon" /> */}
-
             <p className="card short-info">
               <strong>Employer:</strong> Studio Raketa
               <br/>
@@ -25,27 +26,36 @@ export default () => (
                     <h4 className="company-name">Studio Raketa Projects</h4>
                   </div>
                   <div className="projects-row">
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    <a href="https://www.chaosgroup.com" className="project" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/chaos.png" alt="" />
                     </a>
                   
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/smokini.png" alt="" />
                     </a>
                   
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/touchawsome.png" alt="" />
                     </a>
                   
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/smartcom.png" alt="" />
                     </a>
                   
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    <a href="https://konek.bg" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/konek.png" alt="" />
                     </a>
-                    <a href="#" className="project">
-                      <img src="https://picsum.photos/400/300" alt=""/>
+                    
+                    <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/podaraci.png" alt="" />
+                    </a>
+
+                    <a href="https://differentina.com" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/differentina.png" alt="" />
+                    </a>
+
+                    <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer" className="project">
+                      <img src="../static/images/copycom.png" alt="" />
                     </a>
                   </div>
                 </div>
@@ -56,15 +66,6 @@ export default () => (
               <li><strong>Products:</strong> <a href="https://github.com/studioraketa/raketa-cms" target="_blank" rel="noopener noreferrer">Raketa Cms</a></li>
               <li>
                 <strong>Projects build with Raketa Cms:</strong>
-                <br/>
-                <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">Chaos group</a> <br/>
-                <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">Smokini</a> <br/>
-                <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">Touch Awesome</a> <br/>
-                <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">smartcom</a> <br/>
-                <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">Konek</a> <br/>
-                <a href="https://unikalni-podaraci.com">Уникални подаръци</a> <br/>
-                <a href="http://https://differentina.com" target="_blank" rel="noopener noreferrer">Differentina</a> <br/>
-                <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">Copycom</a> <br/>
               </li>
             </ul> */}
           </div>

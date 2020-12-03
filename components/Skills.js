@@ -1,6 +1,6 @@
 export default () => (
   <div className="skills-warpper">
-    <div className="container">
+    <div className="container spacing-bottom">
       <div className="spacing-bottom-lg">
         <h4 className="section-title">Skills and Tools</h4>
         <ul className="skills spacing-top-sm">

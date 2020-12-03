@@ -14,11 +14,11 @@ export default () => (
           <h3>Nedko Slavov</h3>
           <div className="row">
             <div className="col-4">
-              <h4 className="title">Personal info</h4>
+              <h4 className="title">Education</h4>
               <ul>
-                <li><strong>Period:</strong> 2003 - 2007</li>
+                <li><strong>Institution:</strong> Burgas Free University</li>
                 <li><strong>Specialty:</strong> Informatics</li>
-                <li><strong>Educational Institution:</strong> Burgas Free University</li>
+                <li><strong>Period:</strong> 2003 - 2007</li>
               </ul>
             </div>
 

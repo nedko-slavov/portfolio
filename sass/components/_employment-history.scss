@@ -18,11 +18,32 @@
   }
 }
 
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+@keyframes show-employer-info {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% + 40px));
+  }
+}
+
 .employment-history {
   position: relative;
   z-index: 4;
   transform: translateY(100vh);
-  animation: translate 1s forwards linear 6s 1 normal;
+  animation: translate 2s forwards linear 6s 1 normal;
+
+  // opacity: 1;
+  // transform: translateY(0);
 
   &:before {
     display: block;
@@ -32,19 +53,79 @@
     width: 100%;
     height: 100%;
     content: "";
-    z-index: 3;
+    z-index: 4;
     background-color: var(--light-blue);
-    box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.15);
+  }
+
+  .slot-wrapper {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: var(--container-width);
+    height: 40px;
+    margin: 0 auto;
+    background-color: #c2e5e7;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 43px;
+      content: "";
+      top: 17px;
+    }
+
+    &:before {
+      left: -12px;
+      background-color: #b1d9db;
+      transform: skewY(-70deg);
+    }
+
+    &:after {
+      right: -12px;
+      background-color: #b1d9db;
+      transform: skewY(70deg);
+    }
+  }
+
+  .slot-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: var(--container-width);
+    height: 20px;
+    margin: 0 auto;
+    z-index: 11;
+    background-color: transparent;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -5%;
+      right: 0;
+      width: 110%;
+      height: 50px;
+      content: "";
+      z-index: 1;
+      background-color: var(--light-blue);
+    }
   }
 
   .short-info {
     position: relative;
-    z-index: 3;
+    z-index: 4;
   }
 
   .section-title {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     text-align: center;
     color: var(--brand);
   }
@@ -55,17 +136,30 @@
         .card {
           animation: border 10s linear 1s infinite alternate;
         }
+
+        .employer-info {
+          z-index: 3;
+          opacity: 1;
+        }
       }
 
       &:nth-child(2n + 0) {
         .card {
           animation: border 12s linear 5s infinite alternate;
         }
+
+        .employer-info {
+          z-index: 2;
+        }
       }
 
       &:nth-child(3) {
         .card {
           animation: border 10s linear 10s infinite alternate;
+        }
+
+        .employer-info {
+          z-index: 1;
         }
       }
     }
@@ -98,14 +192,14 @@
   &:hover {
     .employer-info {
       opacity: 1;
-      transform: translateY(-100%);
-      z-index: 2;
+      z-index: 3 !important;
+      animation: show-employer-info 0.2s forwards linear 1 alternate;
     }
 
     &:before {
       display: block;
       position: absolute;
-      z-index: 3;
+      z-index: 5;
       top: 0;
       left: 0;
       width: 100%;
@@ -120,33 +214,37 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: -40px;
   margin: 0 auto;
-  width: 1200px;
+  width: 980px;
   min-height: 400px;
   opacity: 0;
   z-index: -1;
   color: var(--true-white);
-  background-color: var(--brand);
+  background-color: #ccd1bc;
   transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  box-shadow: 0 -10px 20px -5px rgba(0, 0, 0, 0.15);
-  border-radius: 16px 16px 0 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: bounce 3s linear infinite alternate;
+
+  // transform: translateY(calc(-100% + 30px));
 
   .company-name {
-    color: var(--true-white);
+    color: var(--brand);
   }
 
   .projects-row {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+    padding: 1em 0;
   }
 
   .projects-wrapper {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    width: 90%;
+    padding: 0 var(--spacing-md);
 
     &:before,
     &:after {
@@ -176,10 +274,10 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
-    width: 400px;
+    width: 350px;
     margin-right: 1em;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 4px;
 
     &:last-of-type {
       margin-right: 0;
