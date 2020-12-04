@@ -16,13 +16,11 @@ class FakeMediaManager {
 const mediaManager = new FakeMediaManager('/')
 
 const THEMES = [
-  ['none', 'None'],
   ['light', 'Light'],
-  ['dark', 'Dark'],
-  ['brand', 'Brand']
-]
+  ['dark', 'Dark']
+];
 
-const DEFAULT_THEME = 'dark'
+const DEFAULT_THEME = 'light'
 
 class ErrorBoundary extends React.Component {
   componentDidCatch(error, info) {

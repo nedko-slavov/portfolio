@@ -9,7 +9,7 @@ const PAGE = {
         variant: 'col-12',
         image: 'https://picsum.photos/id/237/1920/1080',
         description: '',
-        containerSettings: {}
+        containerSettings: { spacing: 'both', theme: 'dark' }
       },
       id: 'zj3nij4',
       chosen: false,
@@ -21,13 +21,12 @@ const PAGE = {
       settings: {
         align: 'text-center',
         title: 'Section title',
-        containerSettings: {spacing: 'both'}
+        containerSettings: { theme: 'light', spacing: 'both' }
       },
       id: 'xsmkfai',
       chosen: false,
       selected: false
     },
-    
     {
       widgetId: 'hn6x94n',
       component: 'ArticlesWidget',
@@ -38,15 +37,39 @@ const PAGE = {
           { id: 2, title: 'Title 2', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit', image: 'https://picsum.photos/id/1003/400/300' },
           { id: 3, title: 'Title 3', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit', image: 'https://picsum.photos/id/1012/400/300' }
         ],
-        containerSettings: {}
+        containerSettings: { theme: 'light', spacing: 'bottom' }
       }
+    },
+    {
+      widgetId: 'xsmkvhs',
+      component: 'SectionTitleWidget',
+      settings: {
+        align: 'text-left',
+        title: 'Section title',
+        containerSettings: { theme: 'dark', spacing: 'top' }
+      },
+      id: 'xsmkvhs',
+      chosen: false,
+      selected: false
+    },
+    {
+      widgetId: 'zj3ft24',
+      component: 'TextWidget',
+      settings: {
+        variant: 8,
+        text: '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti sunt inventore at, eligendi quisquam modi ea earum asperiores libero quos reiciendis impedit placeat! Nesciunt sit consectetur vitae dignissimos deserunt.</p>',
+        containerSettings: { spacing: 'bottom', theme: 'dark' }
+      },
+      id: 'zj3ft24',
+      chosen: false,
+      selected: false
     },
     {
       widgetId: 'xsmdwfai',
       component: 'ButtonsWidget',
       settings: {
         variant: '"3_columns"',
-        containerSettings: { spacing: 'both' },
+        containerSettings: { spacing: 'both', theme: 'dark' },
         list: [
           {
             id: 1,
@@ -67,7 +90,7 @@ const PAGE = {
               link: '#',
               rel: 'follow',
               target: '_self',
-              type: 'primary'
+              type: 'secondary'
             }
           },
           {
@@ -78,7 +101,7 @@ const PAGE = {
               link: '#',
               rel: 'follow',
               target: '_self',
-              type: 'primary'
+              type: 'text'
             }
           }
         ]
@@ -87,18 +110,7 @@ const PAGE = {
       chosen: false,
       selected: false
     },
-    {
-      widgetId: 'zj3ft24',
-      component: 'TextWidget',
-      settings: {
-        variant: 8,
-        text: '<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti sunt inventore at, eligendi quisquam modi ea earum asperiores libero quos reiciendis impedit placeat! Nesciunt sit consectetur vitae dignissimos deserunt.</p>',
-        containerSettings: { spacing: 'bottom' }
-      },
-      id: 'zj3ft24',
-      chosen: false,
-      selected: false
-    },
+
     // {
     //   widgetId: 'hwvm3ul',
     //   component: 'NavigationWidget',

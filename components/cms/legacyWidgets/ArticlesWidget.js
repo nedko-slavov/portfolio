@@ -14,7 +14,7 @@ const Item = ({ title, description, image }) => (
   <div className='article'>
     <Img src={image} variant='fixed_image' className='image' />
 
-    {title && <h4 className='title'>{title}</h4>}
+    {title && <h4 style={{ marginTop: '0.5em' }} className='title'>{title}</h4>}
     {description && <p>{description}</p>}
   </div>
 )
