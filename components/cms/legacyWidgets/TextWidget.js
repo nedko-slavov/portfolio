@@ -16,7 +16,6 @@ const TextWidget = ({ variant, text, containerSettings }) => (
 
 TextWidget.title = 'Text';
 TextWidget.category = 'General';
-TextWidget.primaryField = 'variant';
 TextWidget.dialogSize = 'large';
 
 TextWidget.defaults = {
