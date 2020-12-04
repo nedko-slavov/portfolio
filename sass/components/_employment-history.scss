@@ -39,6 +39,7 @@
 .employment-history {
   position: relative;
   z-index: 4;
+  opacity: 0;
   transform: translateY(100vh);
   animation: translate 2s forwards linear 5s 1 normal;
 
