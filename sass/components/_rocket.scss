@@ -7,8 +7,16 @@
 
 .rocket {
   display: block;
-  width: 230px;
-  height: 360px;
+
+  @include bp($bp-desktop) {
+    width: 230px;
+    height: 360px;
+  }
+
+  @include bp($bp-mobile) {
+    width: 160px;
+    height: 270px;
+  }
 }
 
 #rocket-container {

@@ -19,7 +19,7 @@
 
 @include bp($bp-mobile) {
   :root {
-    --fs-base: 14px;
+    --fs-base: 16px;
     --fraction: 1.125;
   }
 }
@@ -130,16 +130,16 @@ blockquote {
   opacity: 0.8;
 }
 
-.main {
-  @include bp($bp-mobile) {
-    display: none;
-  }
-}
+// .main {
+//   @include bp($bp-mobile) {
+//     display: none;
+//   }
+// }
 
-.notification {
-  text-align: center;
+// .notification {
+//   text-align: center;
 
-  @include bp($bp-desktop) {
-    display: none;
-  }
-}
+//   @include bp($bp-desktop) {
+//     display: none;
+//   }
+// }

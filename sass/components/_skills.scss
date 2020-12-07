@@ -22,7 +22,29 @@
 
   .section-title {
     opacity: 0;
-    animation: opacity 0.5s forwards linear 5s 1 normal;
+  }
+
+  @include bp($bp-desktop) {
+    padding: 0 0 var(--spacing-lg) 0;
+
+    .section-title {
+      animation: opacity 0.5s forwards linear 5s 1 normal;
+    }
+  }
+
+  @include bp($bp-mobile) {
+    padding: var(--spacing-md) var(--gutter);
+    background-color: var(--red);
+
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .section-title {
+      color: var(--white);
+      animation: opacity 0.5s forwards linear 2s 1 normal;
+    }
   }
 }
 
@@ -33,7 +55,6 @@
   margin-top: -1em;
 
   .skill {
-    // color: var(--true-white);
     padding: 0.25em 0.75em;
     margin-top: 1em;
     margin-right: 1em;
@@ -41,7 +62,19 @@
     opacity: 0;
     background-color: var(--light-blue);
     border-radius: 10px;
-    animation: opacity 1s forwards linear 6s 1 normal,
-      scale 0.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
+  }
+
+  @include bp($bp-desktop) {
+    .skill {
+      animation: opacity 1s forwards linear 6s 1 normal,
+        scale 0.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
+    }
+  }
+
+  @include bp($bp-mobile) {
+    .skill {
+      animation: opacity 1s forwards linear 2.5s 1 normal,
+        scale 0.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1) 2.5s 1 normal;
+    }
   }
 }

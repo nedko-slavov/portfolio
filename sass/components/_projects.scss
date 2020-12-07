@@ -4,12 +4,10 @@
   .project {
     position: relative;
     opacity: 0;
-    animation: opacity 0.5s linear 7.5s forwards 1 normal;
   }
 
   .section-title {
     opacity: 0;
-    animation: opacity 0.5s linear 7s forwards 1 normal;
     text-align: center;
   }
 
@@ -26,6 +24,71 @@
     align-items: center;
     opacity: 0;
     animation: opacity 0.5s linear 6.5s forwards 1 normal;
+  }
+
+  @include bp($bp-desktop) {
+    padding: 0 0 var(--spacing-lg) 0;
+
+    .project {
+      animation: opacity 0.5s linear 7.5s forwards 1 normal;
+    }
+
+    .section-title {
+      animation: opacity 0.5s linear 7s forwards 1 normal;
+    }
+
+    .img-container {
+      animation: opacity 0.5s linear 6.5s forwards 1 normal;
+    }
+  }
+
+  @include bp($bp-mobile) {
+    padding: var(--spacing-md) 0 var(--spacing-lg);
+    text-align: center;
+
+    .description-inner {
+      width: 100%;
+    }
+
+    .project {
+      animation: opacity 0.5s linear 3.5s forwards 1 normal;
+    }
+
+    .section-title {
+      animation: opacity 0.5s linear 3s forwards 1 normal;
+    }
+
+    .img-container {
+      animation: opacity 0.5s linear 2.5s forwards 1 normal;
+    }
+
+    .github-link {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.github-link {
+  margin-top: var(--spacing-sm);
+
+  &,
+  svg {
+    display: block;
+    width: 2em;
+    height: 2em;
+  }
+
+  svg {
+    opacity: 0.6;
+    fill: var(--brand);
+    transition: all 0.3s ease-in-out;
+  }
+
+  svg:hover {
+    opacity: 0.9;
+    transform-origin: center;
+    transform: rotateZ(360deg);
   }
 }
 

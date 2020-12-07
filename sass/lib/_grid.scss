@@ -5,7 +5,7 @@
 
 .container {
   width: 100%;
-  padding: 0 calc(var(--gutter) / 2);
+  padding: 0 var(--gutter);
 }
 
 @include bp($bp-desktop) {

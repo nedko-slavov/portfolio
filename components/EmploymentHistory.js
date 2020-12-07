@@ -31,107 +31,84 @@ export default () => {
                   <div className="projects-wrapper">
                     <div className="spacing-bottom-sm">
                       <h4 className="company-name">Studio Raketa Projects</h4>
+                      <p>All projects below are builded with Raketa CMS</p>
                     </div>
   
-                    <div className="projects-row">
-                      <div className="project">
-                        <a href="/builder" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/raketa-cms.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Raketa CMS</h5>
-                          <p>
-                            Raketa company product
-                            <br/>
-                            All projects below are builded with Raketa CMS
-                            <br/>
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <div className="project">
+                    <div className="projects-row row">
+                      <div className="project col-6">
                         <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/chaos.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Chaos Group</h5>
-                          <p>Main client of the company</p>
                         </div>
                       </div>
                     
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/smokini.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Smokini</h5>
-                          <p></p>
                         </div>
                       </div>
                     
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/touchawsome.jpg" alt="" />
                         </a>
-  
-  
+                        
                         <div className="project-info">
                           <h5>Touchawesome</h5>
-                          <p></p>
                         </div>
                       </div>
                     
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/smartcom.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Smartcom</h5>
-                          <p></p>
                         </div>
                       </div>
   
                     
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/konek.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Konek</h5>
-                          <p></p>
                         </div>
                       </div>
   
                       
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/podaraci.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Уникални Подаръци</h5>
-                          <p></p>
                         </div>
                       </div>
   
   
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://differentina.com" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/differentina.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Differentina</h5>
-                          <p></p>
                         </div>
                       </div>
   
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/copycom.jpg" alt="" />
                         </a>
@@ -139,7 +116,6 @@ export default () => {
   
                         <div className="project-info">
                           <h5>Copycom</h5>
-                          <p></p>
                         </div>
                       </div>
                     </div>
@@ -168,15 +144,14 @@ export default () => {
                       <h4 className="company-name">Netea</h4>
                     </div>
   
-                    <div className="projects-row">
-                      <div className="project">
-                          <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer">
+                    <div className="projects-row row">
+                      <div className="project col-6">
+                          <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer" className="col-6">
                             <img src="../static/images/lecturio.jpg" alt="" />
                           </a>
   
                           <div className="project-info">
-                              <h5>Lecturio</h5>
-                            <p></p>
+                            <h5>Lecturio</h5>
                           </div>
                         </div>
                     </div>
@@ -205,26 +180,24 @@ export default () => {
                       <h4 className="company-name">Avalith</h4>
                     </div>
   
-                    <div className="projects-row">
-                      <div className="project">
+                    <div className="projects-row row">
+                      <div className="project col-6">
                         <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/historypin.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
-                            <h5>Historypin</h5>
-                          <p></p>
+                          <h5>Historypin</h5>
                         </div>
                       </div>
   
-                      <div className="project">
+                      <div className="project col-6">
                         <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">
                           <img src="../static/images/zagorcacompany.jpg" alt="" />
                         </a>
   
                         <div className="project-info">
                           <h5>Zagorka Company</h5>
-                          <p></p>
                         </div>
                       </div>
                     </div>
