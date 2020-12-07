@@ -4,30 +4,13 @@
   .project {
     position: relative;
     opacity: 0;
-    animation: opacity 0.5s linear 8.5s forwards 1 normal;
+    animation: opacity 0.5s linear 7.5s forwards 1 normal;
   }
 
   .section-title {
     opacity: 0;
-    animation: opacity 0.5s linear 8s forwards 1 normal;
+    animation: opacity 0.5s linear 7s forwards 1 normal;
     text-align: center;
-  }
-
-  .project-img-bg {
-    position: relative;
-
-    &:before {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      // background-image: linear-gradient(to left, var(--white), transparent);
-    }
   }
 
   .project-description {
@@ -41,37 +24,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: opacity 0.5s linear 6.5s forwards 1 normal;
   }
 }
 
 .projects-rocket {
-  // display: none;
   z-index: 1;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
   transform-origin: center;
-  animation: final-path 2s linear 7s 1 forwards alternate,
-    rotate 1s linear 9s 1 forwards alternate;
+  transform: rotateZ(0);
+  animation: rotate 1s linear 1 forwards alternate;
+
+  &:hover {
+    animation: rotate-backwards 0.5s ease-in-out 1 forwards;
+
+    #rocket-flame {
+      animation: flame-burst 0.15s ease-in-out infinite forwards;
+    }
+  }
+
+  &.rocket-lounch {
+    animation: rotate-backwards 1s linear 1 forwards alternate,
+      final-path 2s linear 1 forwards alternate;
+
+    #rocket-flame {
+      animation: flame-burst 0.15s ease-in-out infinite forwards;
+    }
+  }
 }
 
-// @keyframes move {
-//   0% {
-//     transform: rotate(0);
-//   }
+@keyframes flame-burst {
+  50% {
+    transform: scale(1.2, 1.3);
+  }
 
-//   10% {
-//     opacity: 1;
-//   }
-
-//   50% {
-//     transform: rotate(180deg) translateX(-1500px) translateY(-800px);
-//   }
-
-//   100% {
-//     opacity: 1;
-//     transform: rotate(360deg) translateX(0) translateY(0);
-//   }
-// }
+  100% {
+    transform: scale(1);
+  }
+}
 
 @keyframes final-path {
   50% {
@@ -93,12 +84,24 @@
   }
 
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 @keyframes rotate {
   to {
     transform: translateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes rotate-backwards {
+  from {
+    opacity: 1;
+    transform: rotateZ(30deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateZ(0);
   }
 }

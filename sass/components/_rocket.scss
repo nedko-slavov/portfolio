@@ -7,35 +7,19 @@
 
 .rocket {
   display: block;
-  width: 200px;
-  height: 300px;
-  margin-left: 2em;
-  // animation: size 9s linear 7s 1 forwards;
-  // background-color: #fff;
+  width: 230px;
+  height: 360px;
 }
 
 #rocket-container {
 }
 
 #rocket-flame {
-  animation: flame 1s linear 7s infinite forwards;
+  animation: flame 1s linear infinite forwards;
 }
 
 #rocket {
   // animation: size 2.5s linear infinite forwards;
-}
-
-@keyframes size {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-
-  60% {
-    transform: scale(1);
-  }
 }
 
 @keyframes flame {
