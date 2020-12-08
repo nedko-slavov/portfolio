@@ -120,8 +120,7 @@
 
   @include bp($bp-mobile) {
     &.rocket-lounch {
-      animation: rotate-backwards 1s linear 1 forwards alternate,
-        final-path-mobile 1s linear 1 forwards alternate;
+      animation: rotate-backwards 1s linear 1 forwards alternate;
 
       #rocket-flame {
         animation: flame-burst 0.15s ease-in-out infinite forwards;
