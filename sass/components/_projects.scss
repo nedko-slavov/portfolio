@@ -99,20 +99,33 @@
   transform: rotateZ(0);
   animation: rotate 1s linear 1 forwards alternate;
 
-  &:hover {
-    animation: rotate-backwards 0.5s ease-in-out 1 forwards;
+  @include bp($bp-desktop) {
+    &:hover {
+      animation: rotate-backwards 0.5s ease-in-out 1 forwards;
 
-    #rocket-flame {
-      animation: flame-burst 0.15s ease-in-out infinite forwards;
+      #rocket-flame {
+        animation: flame-burst 0.15s ease-in-out infinite forwards;
+      }
+    }
+
+    &.rocket-lounch {
+      animation: rotate-backwards 1s linear 1 forwards alternate,
+        final-path 2s linear 1 forwards alternate;
+
+      #rocket-flame {
+        animation: flame-burst 0.15s ease-in-out infinite forwards;
+      }
     }
   }
 
-  &.rocket-lounch {
-    animation: rotate-backwards 1s linear 1 forwards alternate,
-      final-path 2s linear 1 forwards alternate;
+  @include bp($bp-mobile) {
+    &.rocket-lounch {
+      animation: rotate-backwards 1s linear 1 forwards alternate,
+        final-path-mobile 1s linear 1 forwards alternate;
 
-    #rocket-flame {
-      animation: flame-burst 0.15s ease-in-out infinite forwards;
+      #rocket-flame {
+        animation: flame-burst 0.15s ease-in-out infinite forwards;
+      }
     }
   }
 }
@@ -136,6 +149,30 @@
   80% {
     opacity: 0;
     transform: translateY(-2000px) scaleY(4);
+  }
+
+  81% {
+    transform: translateY(0);
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes final-path-mobile {
+  50% {
+    opacity: 1;
+    transform: translateY(-300px);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translateY(-1000px) scaleY(4);
   }
 
   81% {

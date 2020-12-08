@@ -57,13 +57,6 @@
 .employment-history {
   position: relative;
   z-index: 4;
-  // opacity: 0;
-  // transform: translateY(100vh);
-
-  // animation: translate 2s forwards linear 5s 1 normal;
-
-  // opacity: 1;
-  // transform: translateY(0);
 
   .frontend-row,
   .designer-row {
@@ -160,6 +153,10 @@
       background-color: var(--light-blue);
     }
 
+    .employer-icon {
+      display: none;
+    }
+
     .employment-history-cnt {
       padding-top: var(--spacing-lg);
       padding-bottom: var(--spacing-lg);
@@ -228,17 +225,9 @@
     padding: var(--spacing-md) 0;
     background-color: var(--light-blue);
 
-    .section-title {
-      text-align: left;
-    }
-
     .slot-shadow,
     .slot-wrapper {
       display: none;
-    }
-
-    .short-info {
-      font-size: 1.2em;
     }
 
     .designer-row {
@@ -247,8 +236,22 @@
 
     .card {
       padding-left: 0;
+      text-align: center;
       border-left: none;
-      // margin-bottom: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .employer-icon {
+      display: block;
+      margin: 0 auto 0.5em;
+      width: 30px;
+      height: 30px;
+      opacity: 0.6;
+    }
+
+    .chevrons {
+      transform-origin: center;
+      transform: rotateZ(180deg) scaleX(1.4);
     }
   }
 }
