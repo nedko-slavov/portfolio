@@ -23,7 +23,7 @@
     border-left-color: rgba(231, 111, 81, 0.4);
   }
   100% {
-    border-left-color: rgba(231, 111, 81, 1);
+    border-left-color: var(--brand);
   }
 }
 
@@ -127,6 +127,12 @@
 
   .short-info {
     position: relative;
+
+    &:hover {
+      .show-projects {
+        color: var(--brand);
+      }
+    }
   }
 
   .section-title {
@@ -172,7 +178,6 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
-          // border-left-color: var(--red) !important;
           animation: border-hover 0.5s linear 1 forwards alternate !important;
         }
       }
@@ -199,6 +204,10 @@
     }
 
     .designer-row {
+      .card {
+        cursor: not-allowed;
+      }
+
       [class*="col"] {
         &:nth-child(1) {
           .card {
@@ -219,6 +228,12 @@
         }
       }
     }
+  }
+
+  .show-projects {
+    font-size: 0.74em;
+    color: var(--red);
+    transition: all 0.3s ease-in-out;
   }
 
   @include bp($bp-mobile) {

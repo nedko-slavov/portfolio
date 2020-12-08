@@ -38,13 +38,42 @@
     }
 
     .img-container {
+      position: relative;
       animation: opacity 0.5s linear 6.5s forwards 1 normal;
+
+      .try-it-now {
+        position: absolute;
+        top: 0;
+        right: 240px;
+        width: 100px;
+        opacity: 0;
+        animation: opacity 0.5s linear 8s forwards 1 normal;
+
+        svg {
+          display: block;
+          width: 100%;
+        }
+      }
     }
   }
 
   @include bp($bp-mobile) {
     padding: var(--spacing-md) 0;
     text-align: center;
+
+    .try-it-now {
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      width: 80px;
+      opacity: 0;
+      animation: opacity 0.5s linear 3s forwards 1 normal;
+
+      svg {
+        display: block;
+        width: 100%;
+      }
+    }
 
     .description-inner {
       width: 100%;

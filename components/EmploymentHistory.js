@@ -233,12 +233,13 @@ export default () => {
           <div className="col-4">
             <div className="employer-info-wrapper">
               <p className="card short-info" onClick={() => setSlide({company: 'raketa', animationClass: 'slide-show'})}>
-                <img src="../static/images/chevrons-up.svg" alt="" className="chevrons employer-icon" />
                 <strong>Employer:</strong> Studio Raketa
                 <br/>
                 <strong>Period:</strong> 04.2016 - 02.2020
                 <br/>
                 <strong>Position:</strong> frontend developer
+                <br/>
+                <span className="show-projects">Show Projects</span>
               </p>
             </div>
           </div>
@@ -246,12 +247,13 @@ export default () => {
           <div className="col-4">
             <div className="employer-info-wrapper">
               <p className="card short-info" onClick={() => setSlide({company: 'netea', animationClass: 'slide-show'})}>
-                <img src="../static/images/chevrons-up.svg" alt="" className="chevrons employer-icon" />
                 <strong>Employer:</strong> Netea
                 <br/>
                 <strong>Period:</strong> 10.2015 - 01.2016
                 <br/>
                 <strong>Position:</strong> frontend developer
+                <br/>
+                <span className="show-projects">Show Projects</span>
               </p>
             </div>
           </div>
@@ -259,12 +261,13 @@ export default () => {
           <div className="col-4">
             <div className="employer-info-wrapper">
               <p className="card short-info" onClick={() => setSlide({company: 'avalith', animationClass: 'slide-show'})}>
-                <img src="../static/images/chevrons-up.svg" alt="" className="chevrons employer-icon" />
                 <strong>Employer:</strong> Avalith
                 <br/>
                 <strong>Period:</strong>  05.2013 - 10.2015
                 <br/>
                 <strong>Position:</strong> frontend developer
+                <br/>
+                <span className="show-projects">Show Projects</span>
               </p>
             </div>
           </div>
@@ -274,7 +277,6 @@ export default () => {
           <div className="col-4">
               <div className="employer-info-wrapper">
                 <p className="card short-info">
-                  <img src="../static/images/archive.svg" alt="" className="employer-icon" />
                   <strong>Employer:</strong> HiEnd Publishing
                   <br/>
                   <strong>Period:</strong> 08.2010 – 05.2013
@@ -290,7 +292,6 @@ export default () => {
             <div className="col-4">
               <div className="employer-info-wrapper">
                 <p className="card short-info">
-                  <img src="../static/images/archive.svg" alt="" className="employer-icon" />
                   <strong>Employer:</strong> “Tema” magazine
                   <br/>
                   <strong>Period:</strong> 08.2008 – 08.2010
@@ -303,7 +304,6 @@ export default () => {
             <div className="col-4">
               <div className="employer-info-wrapper">
                 <p className="card short-info">
-                  <img src="../static/images/archive.svg" alt="" className="employer-icon" />
                   <strong>Employer:</strong> Lambadjiev Standart
                   <br/>
                   <strong>Period:</strong> 10.2007 – 08.2008
