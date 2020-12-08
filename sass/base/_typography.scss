@@ -73,13 +73,27 @@ h2 {
 }
 
 h3 {
-  font-size: var(--fs-xlarge);
   line-height: 1.2;
+
+  @include bp($bp-desktop) {
+    font-size: var(--fs-xlarge);
+  }
+
+  @include bp($bp-mobile) {
+    font-size: var(--fs-huge);
+  }
 }
 
 h4 {
-  font-size: var(--fs-medium);
   line-height: 1.2;
+
+  @include bp($bp-desktop) {
+    font-size: var(--fs-medium);
+  }
+
+  @include bp($bp-mobile) {
+    font-size: var(--fs-xlarge);
+  }
 }
 
 h5,

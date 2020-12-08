@@ -43,7 +43,7 @@
   }
 
   @include bp($bp-mobile) {
-    padding: var(--spacing-md) 0 var(--spacing-lg);
+    padding: var(--spacing-md) 0;
     text-align: center;
 
     .description-inner {

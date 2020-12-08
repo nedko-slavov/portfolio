@@ -35,6 +35,8 @@
   @include bp($bp-mobile) {
     padding: var(--spacing-md) var(--gutter);
     background-color: var(--red);
+    opacity: 0;
+    animation: opacity 0.5s forwards linear 1.5s 1 normal;
 
     .container {
       padding-right: 0;

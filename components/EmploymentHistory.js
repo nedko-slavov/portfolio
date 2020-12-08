@@ -8,12 +8,172 @@ export default () => {
       <div className="slot-wrapper" />
       <div className="slot-shadow" />
       
-      <div className="container spacing-both-lg">
-        <div className="spacing-bottom">
+      <div className="container employment-history-cnt">
+        <div className="section-title-wrapper">
           <h4 className="section-title">Employment History</h4>
         </div>
+
+        <div className={`employer-info ${slide.animationClass} ${slide.company === 'raketa' ? 'current' : ''}`}>
+          <div className="close close-icon" onClick={() => setSlide({company: '', animationClass: 'slide-hide'}) } />
+          {
+            (slide.company === 'raketa') && (
+              <div className="spacing-both">
+              <div className="projects-wrapper">
+                <div className="spacing-bottom-sm">
+                  <h4 className="company-name">Studio Raketa Projects</h4>
+                  <p>All projects below are builded with Raketa CMS</p>
+                </div>
+
+                <div className="projects-row row">
+                  <div className="project col-6">
+                    <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/chaos.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Chaos Group</h5>
+                    </div>
+                  </div>
+                
+                  <div className="project col-6">
+                    <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/smokini.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Smokini</h5>
+                    </div>
+                  </div>
+                
+                  <div className="project col-6">
+                    <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/touchawsome.jpg" alt="" />
+                    </a>
+                    
+                    <div className="project-info">
+                      <h5>Touchawesome</h5>
+                    </div>
+                  </div>
+                
+                  <div className="project col-6">
+                    <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/smartcom.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Smartcom</h5>
+                    </div>
+                  </div>
+
+                
+                  <div className="project col-6">
+                    <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/konek.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Konek</h5>
+                    </div>
+                  </div>
+
+                  
+                  <div className="project col-6">
+                    <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/podaraci.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Уникални Подаръци</h5>
+                    </div>
+                  </div>
+
+
+                  <div className="project col-6">
+                    <a href="https://differentina.com" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/differentina.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Differentina</h5>
+                    </div>
+                  </div>
+
+                  <div className="project col-6">
+                    <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/copycom.jpg" alt="" />
+                    </a>
+
+
+                    <div className="project-info">
+                      <h5>Copycom</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            )
+          }
+
+          {
+            (slide.company === 'netea') && (
+              <div className="spacing-both">
+              <div className="projects-wrapper">
+                <div className="spacing-bottom-sm">
+                  <h4 className="company-name">Netea</h4>
+                </div>
+
+                <div className="projects-row row">
+                  <div className="project col-6">
+                      <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer" className="col-6">
+                        <img src="../static/images/lecturio.jpg" alt="" />
+                      </a>
+
+                      <div className="project-info">
+                        <h5>Lecturio</h5>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            )
+          }
+
+          {
+          (slide.company === 'avalith') && (
+            <div className="spacing-both">
+              <div className="projects-wrapper">
+                <div className="spacing-bottom-sm">
+                  <h4 className="company-name">Avalith</h4>
+                </div>
+
+                <div className="projects-row row">
+                  <div className="project col-6">
+                    <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/historypin.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Historypin</h5>
+                    </div>
+                  </div>
+
+                  <div className="project col-6">
+                    <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">
+                      <img src="../static/images/zagorcacompany.jpg" alt="" />
+                    </a>
+
+                    <div className="project-info">
+                      <h5>Zagorka Company</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            )
+          }
+        </div>
   
-        <div className="row spacing-top-sm">
+        <div className="row spacing-top-sm frontend-row">
           <div className="col-4">
             <div className="employer-info-wrapper">
               <p className="card short-info" onClick={() => setSlide({company: 'raketa', animationClass: 'slide-show'})}>
@@ -23,105 +183,6 @@ export default () => {
                 <br/>
                 <strong>Position:</strong> frontend developer
               </p>
-  
-              <div className={`employer-info ${slide.animationClass} ${slide.company === 'raketa' ? 'current' : ''}`}>
-                <div className="close close-icon" onClick={() => setSlide({company: '', animationClass: 'slide-hide'}) } />
-                
-                <div className="spacing-both">
-                  <div className="projects-wrapper">
-                    <div className="spacing-bottom-sm">
-                      <h4 className="company-name">Studio Raketa Projects</h4>
-                      <p>All projects below are builded with Raketa CMS</p>
-                    </div>
-  
-                    <div className="projects-row row">
-                      <div className="project col-6">
-                        <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/chaos.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Chaos Group</h5>
-                        </div>
-                      </div>
-                    
-                      <div className="project col-6">
-                        <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/smokini.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Smokini</h5>
-                        </div>
-                      </div>
-                    
-                      <div className="project col-6">
-                        <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/touchawsome.jpg" alt="" />
-                        </a>
-                        
-                        <div className="project-info">
-                          <h5>Touchawesome</h5>
-                        </div>
-                      </div>
-                    
-                      <div className="project col-6">
-                        <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/smartcom.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Smartcom</h5>
-                        </div>
-                      </div>
-  
-                    
-                      <div className="project col-6">
-                        <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/konek.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Konek</h5>
-                        </div>
-                      </div>
-  
-                      
-                      <div className="project col-6">
-                        <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/podaraci.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Уникални Подаръци</h5>
-                        </div>
-                      </div>
-  
-  
-                      <div className="project col-6">
-                        <a href="https://differentina.com" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/differentina.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Differentina</h5>
-                        </div>
-                      </div>
-  
-                      <div className="project col-6">
-                        <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/copycom.jpg" alt="" />
-                        </a>
-  
-  
-                        <div className="project-info">
-                          <h5>Copycom</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
   
@@ -134,30 +195,6 @@ export default () => {
                 <br/>
                 <strong>Position:</strong> frontend developer
               </p>
-  
-              <div className={`employer-info ${slide.animationClass} ${slide.company === 'netea' ? 'current' : ''}`}>
-                <div className="close close-icon" onClick={() => setSlide({company: '', animationClass: 'slide-hide'}) } />
-                
-                <div className="spacing-both">
-                  <div className="projects-wrapper">
-                    <div className="spacing-bottom-sm">
-                      <h4 className="company-name">Netea</h4>
-                    </div>
-  
-                    <div className="projects-row row">
-                      <div className="project col-6">
-                          <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer" className="col-6">
-                            <img src="../static/images/lecturio.jpg" alt="" />
-                          </a>
-  
-                          <div className="project-info">
-                            <h5>Lecturio</h5>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
   
@@ -170,46 +207,11 @@ export default () => {
                 <br/>
                 <strong>Position:</strong> frontend developer
               </p>
-  
-              <div className={`employer-info ${slide.animationClass} ${slide.company === 'avalith' ? 'current' : ''}`}>
-                <div className="close close-icon" onClick={() => setSlide({company: '', animationClass: 'slide-hide'}) } />
-                
-                <div className="spacing-both">
-                  <div className="projects-wrapper">
-                    <div className="spacing-bottom-sm">
-                      <h4 className="company-name">Avalith</h4>
-                    </div>
-  
-                    <div className="projects-row row">
-                      <div className="project col-6">
-                        <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/historypin.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Historypin</h5>
-                        </div>
-                      </div>
-  
-                      <div className="project col-6">
-                        <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">
-                          <img src="../static/images/zagorcacompany.jpg" alt="" />
-                        </a>
-  
-                        <div className="project-info">
-                          <h5>Zagorka Company</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
             </div>
           </div>
         </div>
   
-        <div className="row spacing-top">
+        <div className="row spacing-top designer-row">
           <div className="col-4">
               <div className="employer-info-wrapper">
                 <p className="card short-info">
