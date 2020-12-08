@@ -193,7 +193,7 @@ export default () => {
             <div className="project-description">
               <div className="description-inner">
                 <h5>Raketa CMS</h5>
-                <p>Contributor to Raketa CMS <br/> project builded in <a href="https://raketadesign.com/" target="_blank" rel="noopener noreferrer">Studio Raketa</a></p>
+                <p>Contributor to Raketa CMS <br/> project made in <a href="https://raketadesign.com/" target="_blank" rel="noopener noreferrer">Studio Raketa</a></p>
 
                 <a href="https://github.com/studioraketa/raketa-cms" target="_blank" rel="noopener noreferrer" className="github-link">
                   <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
