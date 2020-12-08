@@ -1,10 +1,18 @@
+import Image from 'next/image'
 
 export default () => (
   <div className="lead-container">
     <div className="container">
       <div className="avatar-wrapper">
         <div className="avatar-bg">
-          <img className="avatar" src="../static/images/nedko.jpeg" alt="" />
+          <Image
+            src="/static/images/nedko.jpeg"
+            alt="Picture of the author"
+            width={150}
+            height={150}
+            className="avatar"
+            eager
+          />
           <div className="text-bg" />
         </div>
       </div>

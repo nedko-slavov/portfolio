@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image'
 
 export default () => {
   const [slide, setSlide] = useState({company: 'raketa', animationClass: ''});
@@ -27,7 +28,12 @@ export default () => {
                 <div className="projects-row row">
                   <div className="project col-6">
                     <a href="https://www.chaosgroup.com" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/chaos.jpg" alt="" />
+                      <Image
+                        src="/static/images/chaos.jpg"
+                        alt="Picture of the author"
+                        width={440}
+                        height={250}
+                      />
                     </a>
 
                     <div className="project-info">
@@ -37,7 +43,12 @@ export default () => {
                 
                   <div className="project col-6">
                     <a href="https://smokini.bg" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/smokini.jpg" alt="" />
+                      <Image
+                          src="/static/images/smokini.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -47,7 +58,12 @@ export default () => {
                 
                   <div className="project col-6">
                     <a href="https://touchawesome.com" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/touchawsome.jpg" alt="" />
+                      <Image
+                          src="/static/images/touchawsome.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
                     
                     <div className="project-info">
@@ -57,7 +73,12 @@ export default () => {
                 
                   <div className="project col-6">
                     <a href="https://smartcom.bg" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/smartcom.jpg" alt="" />
+                      <Image
+                          src="/static/images/smartcom.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -68,7 +89,12 @@ export default () => {
                 
                   <div className="project col-6">
                     <a href="https://konek.bg" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/konek.jpg" alt="" />
+                      <Image
+                          src="/static/images/konek.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -79,7 +105,12 @@ export default () => {
                   
                   <div className="project col-6">
                     <a href="https://unikalni-podaraci.com" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/podaraci.jpg" alt="" />
+                      <Image
+                          src="/static/images/podaraci.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -90,7 +121,12 @@ export default () => {
 
                   <div className="project col-6">
                     <a href="https://differentina.com" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/differentina.jpg" alt="" />
+                      <Image
+                          src="/static/images/differentina.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -100,7 +136,12 @@ export default () => {
 
                   <div className="project col-6">
                     <a href="https://copycom.bg/bg" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/copycom.jpg" alt="" />
+                      <Image
+                          src="/static/images/copycom.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
 
@@ -125,7 +166,12 @@ export default () => {
                 <div className="projects-row row">
                   <div className="project col-6">
                       <a href="https://www.lecturio.com" target="_blank" rel="noopener noreferrer" className="col-6">
-                        <img src="../static/images/lecturio.jpg" alt="" />
+                        <Image
+                          src="/static/images/lecturio.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                       </a>
 
                       <div className="project-info">
@@ -149,7 +195,12 @@ export default () => {
                 <div className="projects-row row">
                   <div className="project col-6">
                     <a href="https://www.historypin.org" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/historypin.jpg" alt="" />
+                      <Image
+                          src="/static/images/historypin.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">
@@ -159,7 +210,12 @@ export default () => {
 
                   <div className="project col-6">
                     <a href="http://zagorkacompany.bg" target="_blank" rel="noopener noreferrer">
-                      <img src="../static/images/zagorcacompany.jpg" alt="" />
+                      <Image
+                          src="/static/images/zagorcacompany.jpg"
+                          alt="Picture of the author"
+                          width={440}
+                          height={250}
+                        />
                     </a>
 
                     <div className="project-info">

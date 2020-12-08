@@ -11,7 +11,7 @@
     "@raketa-cms/raketa-image-picker": "^1.2.7",
     "@raketa-cms/raketa-rte": "^1.0.0",
     "@zeit/next-sass": "^1.0.1",
-    "next": "^7.0.0",
+    "next": "^10.0.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
