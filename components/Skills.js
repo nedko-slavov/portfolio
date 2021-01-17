@@ -8,6 +8,7 @@ export default () => (
         <li className="skill">HTML5</li>
         <li className="skill">Javascript</li>
         <li className="skill">React</li>
+        <li className="skill">Typescript</li>
         <li className="skill">React Native</li>
         <li className="skill">Styled components</li>
         <li className="skill">Nextjs</li>

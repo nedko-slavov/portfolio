@@ -1,0 +1,24 @@
+{
+  "globals": {
+    "fetch": false,
+    "window": true
+  },
+  "extends": ["airbnb", "airbnb/hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": 'error',
+    "react-hooks/exhaustive-deps": 'warn',
+    // "react/destructuring-assignment": [<enabled>, 'always', { "ignoreClassFields": true }],
+    // "react/forbid-prop-types": [
+    //   0
+    // ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}

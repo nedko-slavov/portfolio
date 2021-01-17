@@ -1,6 +1,7 @@
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-export default () => (
+const LeadContainer = () => (
   <div className="lead-container">
     <div className="container">
       <div className="avatar-wrapper">
@@ -11,7 +12,6 @@ export default () => (
             width={150}
             height={150}
             className="avatar"
-            eager
           />
           <div className="text-bg" />
         </div>
@@ -23,18 +23,35 @@ export default () => (
           <div className="col-4 education-col">
             <h4 className="title">Education</h4>
             <ul>
-              <li><strong>Institution:</strong> Burgas Free University</li>
-              <li><strong>Specialty:</strong> Informatics</li>
-              <li><strong>Period:</strong> 2003 - 2007</li>
+              <li>
+                <strong>Institution: </strong>
+                Burgas Free University
+              </li>
+              <li>
+                <strong>Specialty: </strong>
+                Informatics
+              </li>
+              <li>
+                <strong>Period: </strong>
+                2003 - 2007
+              </li>
             </ul>
           </div>
 
           <div className="col-4">
             <h4 className="title">Contact</h4>
-            <p><strong>tel:</strong> 0878 895 044 <br/> <strong>email:</strong> n.p.slavov@gmail.com</p>
+            <p>
+              <strong>tel: </strong>
+              0878 895 044
+              <br />
+              <strong>email: </strong>
+              n.p.slavov@gmail.com
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 );
+
+export default LeadContainer;
