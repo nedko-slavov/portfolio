@@ -19,6 +19,7 @@ const LeadContainer = () => (
 
       <div className="lead-text">
         <h3>Nedko Slavov</h3>
+
         <div className="row">
           <div className="col-4 education-col">
             <h4 className="title">Education</h4>

@@ -54,75 +54,74 @@
   }
 }
 
+.slot-wrapper {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: var(--container-width);
+  height: 40px;
+  margin: 0 auto;
+  background-color: #c2e5e7;
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 43px;
+    content: "";
+    top: 17px;
+  }
+
+  &:before {
+    left: -12px;
+    background-color: #b1d9db;
+    transform: skewY(-70deg);
+  }
+
+  &:after {
+    right: -12px;
+    background-color: #b1d9db;
+    transform: skewY(70deg);
+  }
+}
+
+.slot-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: var(--container-width);
+  height: 20px;
+  margin: 0 auto;
+  z-index: 11;
+  background-color: transparent;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    right: 0;
+    width: 110%;
+    height: 50px;
+    content: "";
+    z-index: 1;
+    background-color: var(--light-blue);
+  }
+}
+
 .employment-history {
   position: relative;
   z-index: 4;
 
-  .frontend-row,
-  .designer-row {
+  .employers {
     position: relative;
     z-index: 2;
-  }
-
-  .slot-wrapper {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    width: var(--container-width);
-    height: 40px;
-    margin: 0 auto;
-    background-color: #c2e5e7;
-
-    &:before,
-    &:after {
-      display: block;
-      position: absolute;
-      width: 12px;
-      height: 43px;
-      content: "";
-      top: 17px;
-    }
-
-    &:before {
-      left: -12px;
-      background-color: #b1d9db;
-      transform: skewY(-70deg);
-    }
-
-    &:after {
-      right: -12px;
-      background-color: #b1d9db;
-      transform: skewY(70deg);
-    }
-  }
-
-  .slot-shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: var(--container-width);
-    height: 20px;
-    margin: 0 auto;
-    z-index: 11;
-    background-color: transparent;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-
-    &:before {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -5%;
-      right: 0;
-      width: 110%;
-      height: 50px;
-      content: "";
-      z-index: 1;
-      background-color: var(--light-blue);
-    }
   }
 
   .short-info {
@@ -132,6 +131,16 @@
       .show-projects {
         color: var(--brand);
       }
+    }
+
+    button {
+      outline: none;
+      text-align: left;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      border: none;
+      background-color: transparent;
     }
   }
 
@@ -172,59 +181,41 @@
       padding-bottom: var(--spacing-md);
     }
 
-    .frontend-row {
-      .card {
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          animation: border-hover 0.5s linear 1 forwards alternate !important;
-        }
-      }
-
-      [class*="col"] {
-        &:nth-child(1) {
-          .card {
-            animation: border 10s linear 1s infinite alternate;
-          }
-        }
-
-        &:nth-child(2n + 0) {
-          .card {
-            animation: border 12s linear 5s infinite alternate;
-          }
-        }
-
-        &:nth-child(3) {
-          .card {
-            animation: border 10s linear 10s infinite alternate;
-          }
-        }
-      }
+    .card {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
     }
 
-    .designer-row {
-      .card {
-        cursor: not-allowed;
+    [class*="col"] {
+      &:nth-child(1) {
+        .card {
+          animation: border 10s linear 1s infinite alternate;
+        }
       }
 
-      [class*="col"] {
-        &:nth-child(1) {
-          .card {
-            animation: border 10s linear 12s infinite alternate;
+      &:nth-child(2n + 0) {
+        .card {
+          animation: border 12s linear 5s infinite alternate;
+        }
+      }
+
+      &:nth-child(3) {
+        .card {
+          animation: border 10s linear 10s infinite alternate;
+        }
+      }
+
+      &:nth-last-child(n + 4) {
+        .card {
+          &:hover {
+            animation: border-hover 0.5s linear 1 forwards alternate !important;
           }
         }
+      }
 
-        &:nth-child(2n + 0) {
-          .card {
-            animation: border 12s linear 15s infinite alternate;
-          }
-        }
-
-        &:nth-child(3) {
-          .card {
-            animation: border 10s linear 20s infinite alternate;
-          }
+      &:nth-last-child(-n + 3) {
+        .card {
+          cursor: not-allowed;
         }
       }
     }
@@ -337,6 +328,10 @@
     right: var(--spacing-md);
     cursor: pointer;
     z-index: 1;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    outline: none;
   }
 
   .projects-row {
