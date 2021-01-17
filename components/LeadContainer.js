@@ -5,19 +5,19 @@ const LeadContainer = () => (
   <div className="lead-container">
     <div className="container">
       <div className="avatar-wrapper">
-        <div className="avatar-bg">
+        <div className="avatar-bg avatar-bg-animation">
           <Image
             src="/static/images/nedko.jpeg"
             alt="Picture of the author"
             width={150}
             height={150}
-            className="avatar"
+            className="avatar avatar-animation"
           />
-          <div className="text-bg" />
+          <div className="text-bg text-bg-animation" />
         </div>
       </div>
 
-      <div className="lead-text">
+      <div className="lead-text lead-text-animation">
         <h3>Nedko Slavov</h3>
 
         <div className="row">

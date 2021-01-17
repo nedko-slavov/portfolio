@@ -1,47 +1,66 @@
 @keyframes opacity {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 @keyframes gradient {
-  0% {
+  from {
     opacity: 0;
     background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
   }
-  100% {
+  to {
     opacity: 1;
     background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
   }
 }
 
 @keyframes width {
-  0% {
+  from {
     width: 0;
   }
-  100% {
+  to {
     width: 1200px;
   }
 }
 
 @keyframes shadow {
-  0% {
+  from {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0);
   }
-  100% {
+  to {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
   }
 }
 
-@keyframes scale {
-  0% {
-    transform: scale(0.6);
+.avatar-bg-animation {
+  &:before {
+    animation: shadow 1s both linear 0.3s 1 normal;
   }
-  100% {
-    transform: scale(1);
+
+  &:after {
+    animation: gradient 1s both linear 1s 1 normal;
+  }
+}
+
+.avatar-animation {
+  animation: opacity 1s forwards ease-in-out 0.0001s 1 normal;
+}
+
+.text-bg-animation {
+  animation: width 3s both linear 2s 1 normal;
+}
+
+.lead-text-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 3s both linear 4s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 3s forwards linear 0.8s 1 normal;
   }
 }
 
@@ -85,19 +104,18 @@
       width: 100%;
       height: 100%;
       z-index: 3;
-      animation: shadow 1s forwards linear 0.3s 1 normal;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
     }
 
     &:after {
       z-index: 0;
-      animation: gradient 1s forwards linear 1s 1 normal;
+      background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
     }
   }
 
   .avatar {
     position: relative;
     z-index: 1;
-    animation: opacity 1s forwards ease-in-out 0.0001s 1 normal;
   }
 
   .row {
@@ -115,7 +133,7 @@
     left: 100px;
     z-index: 0;
     height: 5px;
-    animation: width 3s forwards linear 2s 1 normal;
+    width: 1200px;
     content: "";
     background-image: linear-gradient(to right, #ccd1bc, var(--white) 90%);
   }
@@ -149,7 +167,7 @@
     }
 
     .lead-text {
-      animation: opacity 3s forwards linear 4s 1 normal;
+      opacity: 1;
     }
   }
 
@@ -181,10 +199,6 @@
 
     .education-col {
       margin-bottom: var(--spacing-sm);
-    }
-
-    .lead-text {
-      animation: opacity 3s forwards linear 0.8s 1 normal;
     }
   }
 }

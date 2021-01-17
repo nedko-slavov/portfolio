@@ -4,7 +4,7 @@ import CompanyInfo from './CompanyInfo';
 import employersData from './employersData';
 
 const EmploymentHistory = () => {
-  const [slide, setSlide] = useState({ company: 'raketa', animationClass: '' });
+  const [employerInfo, setEmployerInfo] = useState({ company: 'raketa', animationClass: '' });
 
   return (
     <div className="employment-history">
@@ -16,16 +16,16 @@ const EmploymentHistory = () => {
           <h4 className="section-title">Employment History</h4>
         </div>
 
-        <div className={`employer-info ${slide.animationClass} ${slide.company === 'raketa' ? 'current' : ''}`}>
+        <div className={`employer-info ${employerInfo.animationClass} ${employerInfo.company === 'raketa' ? 'current' : ''}`}>
           <button
             type="button"
             className="close close-icon"
             aria-label="close"
-            onClick={() => setSlide({ company: '', animationClass: 'slide-hide' })}
+            onClick={() => setEmployerInfo({ company: '', animationClass: 'slide-hide' })}
           />
 
           {employersData.map((employer) => (
-            slide.company === employer.id && (
+            employerInfo.company === employer.id && (
               <CompanyInfo
                 key={employer.id}
                 employer={employer}
@@ -41,7 +41,7 @@ const EmploymentHistory = () => {
                 employerName={employer.name}
                 period={employer.period}
                 position={employer.position}
-                handleClick={() => setSlide({ company: employer.id, animationClass: 'slide-show' })}
+                handleClick={() => setEmployerInfo({ company: employer.id, animationClass: 'slide-show' })}
               />
             </div>
           ))}
