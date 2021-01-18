@@ -36,14 +36,13 @@
   &.slide-show {
     .projects-row {
       overflow-y: scroll;
-      height: 450px;
+      height: 320px;
     }
   }
 
   .projects-row {
     overflow: hidden;
     height: 40px;
-    padding: 1em 0;
   }
 
   .projects-wrapper {
@@ -90,7 +89,7 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
-    .project-info {
+    .project-desc {
       padding-top: var(--spacing-sm);
     }
   }

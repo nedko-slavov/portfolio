@@ -6,7 +6,7 @@ const CompanyInfo = ({ employer }) => {
   const { projects, name, description } = employer;
 
   return (
-    <div className="spacing-both">
+    <div className="spacing-top">
       <div className="projects-wrapper">
         <div className="spacing-bottom-sm">
           <h4 className="company-name">
