@@ -22,7 +22,7 @@ export default () => {
   return (
     <AdminBuilder
       page={pickPage()}
-      back_url="https://google.com/"
+      back_url="/"
       onSave={(page) => localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(page))}
     />
   );

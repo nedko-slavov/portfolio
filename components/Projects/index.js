@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import TryItSVG from './TryItSVG';
 import RocketSVG from './RocketSVG';
 import GithubSVG from './GithubSVG';
@@ -36,15 +37,13 @@ const Projects = () => {
                 <TryItSVG />
               </div>
 
-              <a
-                href="/builder"
-                onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}
-                target="_blank"
-              >
-                <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
-                  <RocketSVG />
-                </div>
-              </a>
+              <Link href="/builder">
+                <a onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}>
+                  <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
+                    <RocketSVG />
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
 
