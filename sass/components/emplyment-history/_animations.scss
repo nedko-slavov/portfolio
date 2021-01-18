@@ -1,0 +1,44 @@
+@keyframes border {
+  0% {
+    border-left-color: rgba(231, 111, 81, 0.4);
+  }
+  100% {
+    border-left-color: rgba(231, 111, 81, 0);
+  }
+}
+
+@keyframes border-hover {
+  0% {
+    border-left-color: rgba(231, 111, 81, 0.4);
+  }
+  100% {
+    border-left-color: var(--brand);
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: -40px;
+  }
+  to {
+    top: -50px;
+  }
+}
+
+@keyframes show-employer-info {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-450px + 40px));
+  }
+}
+
+@keyframes hide-employer-info {
+  from {
+    transform: translateY(calc(-450px + 40px));
+  }
+  to {
+    transform: translateY(0);
+  }
+}

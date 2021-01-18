@@ -1,3 +1,65 @@
+@keyframes flame-burst {
+  50% {
+    transform: scale(1.2, 1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes final-path {
+  50% {
+    opacity: 1;
+    transform: translateY(-300px);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translateY(-2000px) scaleY(4);
+  }
+
+  81% {
+    transform: translateY(0);
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: translateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes rotate-backwards {
+  from {
+    opacity: 1;
+    transform: rotateZ(30deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes flame {
+  50% {
+    transform: scaleY(1.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 .rocket,
 #rocket,
 #rocket-flame {
@@ -7,6 +69,10 @@
 
 .rocket {
   display: block;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  transform-origin: center;
+  transform: rotateZ(0);
 
   @include bp($bp-desktop) {
     width: 230px;
@@ -23,19 +89,41 @@
 }
 
 #rocket-flame {
-  animation: flame 1s linear infinite forwards;
+  animation: flame 1s forwards linear infinite;
 }
 
 #rocket {
-  // animation: size 2.5s linear infinite forwards;
 }
 
-@keyframes flame {
-  50% {
-    transform: scaleY(1.2);
+.rocket-animation {
+  animation: rotate 1s both 1 linear alternate;
+
+  @include bp($bp-desktop) {
+    &:hover {
+      animation: rotate-backwards 0.5s ease-in-out 1 forwards;
+
+      #rocket-flame {
+        animation: flame-burst 0.15s ease-in-out infinite forwards;
+      }
+    }
+
+    &.rocket-lounch {
+      animation: rotate-backwards 1s forwards 1 linear alternate,
+        final-path 2s forwards 1 linear alternate;
+
+      #rocket-flame {
+        animation: flame-burst 0.15s ease-in-out infinite forwards;
+      }
+    }
   }
 
-  100% {
-    transform: scaleY(1);
+  @include bp($bp-mobile) {
+    &.rocket-lounch {
+      animation: rotate-backwards 1s forwards 1 linear alternate;
+
+      #rocket-flame {
+        animation: flame-burst 0.15s forwards ease-in-out infinite;
+      }
+    }
   }
 }

@@ -16,7 +16,7 @@ const EmploymentHistory = () => {
           <h4 className="section-title">Employment History</h4>
         </div>
 
-        <div className={`employer-info ${employerInfo.animationClass} ${employerInfo.company === 'raketa' ? 'current' : ''}`}>
+        <div className={`employer-info ${employerInfo.animationClass}`}>
           <button
             type="button"
             className="close close-icon"

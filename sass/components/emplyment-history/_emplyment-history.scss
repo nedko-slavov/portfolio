@@ -1,0 +1,129 @@
+@import "./animations";
+@import "./slot";
+@import "./employer-info";
+
+.employment-history {
+  position: relative;
+  z-index: 4;
+
+  .short-info {
+    position: relative;
+
+    &:hover {
+      .show-projects {
+        color: var(--brand);
+      }
+    }
+
+    button {
+      outline: none;
+      text-align: left;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .section-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--brand);
+  }
+
+  .card {
+    border-left-color: rgba(231, 111, 81, 0.4);
+  }
+
+  .show-projects {
+    font-size: 0.74em;
+    color: var(--red);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @include bp($bp-desktop) {
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 2;
+      background-color: var(--light-blue);
+    }
+
+    .section-title-wrapper {
+      padding-bottom: var(--spacing-md);
+    }
+
+    .employment-history-cnt {
+      padding-top: var(--spacing-lg);
+      padding-bottom: var(--spacing-lg);
+    }
+
+    .card {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    [class*="col"] {
+      &:nth-child(1) {
+        .card {
+          animation: border 10s infinite 1s linear alternate;
+        }
+      }
+
+      &:nth-child(2n + 0) {
+        .card {
+          animation: border 12s infinite 5s linear alternate;
+        }
+      }
+
+      &:nth-child(3) {
+        .card {
+          animation: border 10s infinite 10s linear alternate;
+        }
+      }
+
+      &:nth-last-child(n + 4) {
+        .card {
+          &:hover {
+            animation: border-hover 0.5s forwards 1 linear alternate;
+          }
+        }
+      }
+
+      &:nth-last-child(-n + 3) {
+        .card {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  @include bp($bp-mobile) {
+    padding: var(--spacing-md) 0;
+    background-color: var(--light-blue);
+
+    .slot-shadow,
+    .slot-wrapper {
+      display: none;
+    }
+
+    .card {
+      margin-bottom: var(--spacing-sm);
+      padding-left: 0;
+      text-align: center;
+      border-left: none;
+    }
+  }
+}
+
+.employers {
+  position: relative;
+  z-index: 2;
+}

@@ -26,13 +26,13 @@ const Projects = () => {
     <div className="projects">
       <div className="container">
         <div className="spacing-bottom-sm">
-          <h4 className="section-title">Projects</h4>
+          <h4 className="section-title section-title-animation">Projects</h4>
         </div>
 
         <div className="row">
           <div className="col-6">
-            <div className="img-container">
-              <div className="try-it-now">
+            <div className="img-container img-container-animation">
+              <div className="try-it-now try-it-now-animation">
                 <TryItSVG />
               </div>
 
@@ -41,14 +41,14 @@ const Projects = () => {
                 onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}
                 target="_blank"
               >
-                <div className={`projects-rocket ${isRocketLounched ? 'rocket-lounch' : ''}`}>
+                <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
                   <RocketSVG />
                 </div>
               </a>
             </div>
           </div>
 
-          <div className="col-6 project">
+          <div className="col-6 project project-desc-animation">
             <div className="project-description">
               <div className="description-inner">
                 <h5>Raketa CMS</h5>

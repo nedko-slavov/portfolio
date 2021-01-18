@@ -1,60 +1,3 @@
-@keyframes gradient {
-  from {
-    opacity: 0;
-    background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
-  }
-  to {
-    opacity: 1;
-    background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
-  }
-}
-
-@keyframes width {
-  from {
-    width: 0;
-  }
-  to {
-    width: 1200px;
-  }
-}
-
-@keyframes shadow {
-  from {
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0);
-  }
-  to {
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.avatar-bg-animation {
-  &:before {
-    animation: shadow 1s both linear 0.3s 1 normal;
-  }
-
-  &:after {
-    animation: gradient 1s both linear 1s 1 normal;
-  }
-}
-
-.avatar-animation {
-  animation: opacity 1s forwards ease-in-out 0.0001s 1 normal;
-}
-
-.text-bg-animation {
-  animation: width 3s both linear 2s 1 normal;
-}
-
-.lead-text-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 3s both linear 4s 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 3s forwards linear 0.8s 1 normal;
-  }
-}
-
 .lead-container {
   background: var(--white);
 
@@ -191,5 +134,62 @@
     .education-col {
       margin-bottom: var(--spacing-sm);
     }
+  }
+}
+
+@keyframes gradient {
+  from {
+    opacity: 0;
+    background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
+  }
+  to {
+    opacity: 1;
+    background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1200px;
+  }
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0);
+  }
+  to {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.avatar-bg-animation {
+  &:before {
+    animation: shadow 1s both linear 0.3s 1 normal;
+  }
+
+  &:after {
+    animation: gradient 1s both linear 1s 1 normal;
+  }
+}
+
+.avatar-animation {
+  animation: opacity 1s forwards ease-in-out 0.0001s 1 normal;
+}
+
+.text-bg-animation {
+  animation: width 3s both linear 2s 1 normal;
+}
+
+.lead-text-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 3s both linear 4s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 3s forwards linear 0.8s 1 normal;
   }
 }

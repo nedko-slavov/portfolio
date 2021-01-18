@@ -2,7 +2,7 @@
   "globals": {
     "fetch": false,
     "window": true,
-    "localStorage": true, 
+    "localStorage": true
   },
   "extends": ["airbnb", "airbnb/hooks"],
   "rules": {

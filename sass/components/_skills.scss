@@ -1,41 +1,3 @@
-@keyframes scale {
-  0% {
-    transform: scale(0.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.skills-warpper-animation {
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both linear 1.5s 1 normal;
-  }
-}
-
-.skills-title-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 0.5s both linear 5s 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both linear 2s 1 normal;
-  }
-}
-
-.skill-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 1s both linear 6s 1 normal,
-      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 1s both linear 2.5s 1 normal,
-      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 2.5s 1 normal;
-  }
-}
-
 .skills-warpper {
   background: var(--white);
 
@@ -77,5 +39,43 @@
     opacity: 1;
     background-color: var(--light-blue);
     border-radius: 10px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.skills-warpper-animation {
+  @include bp($bp-mobile) {
+    animation: opacity 0.5s both linear 1.5s 1 normal;
+  }
+}
+
+.skills-title-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 0.5s both linear 5s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 0.5s both linear 2s 1 normal;
+  }
+}
+
+.skill-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 1s both linear 6s 1 normal,
+      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 1s both linear 2.5s 1 normal,
+      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 2.5s 1 normal;
   }
 }

@@ -1,0 +1,60 @@
+.slot-wrapper {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: var(--container-width);
+  height: 40px;
+  margin: 0 auto;
+  background-color: #c2e5e7;
+
+  &:before,
+  &:after {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 43px;
+    content: "";
+    top: 17px;
+  }
+
+  &:before {
+    left: -12px;
+    background-color: #b1d9db;
+    transform: skewY(-70deg);
+  }
+
+  &:after {
+    right: -12px;
+    background-color: #b1d9db;
+    transform: skewY(70deg);
+  }
+}
+
+.slot-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: var(--container-width);
+  height: 20px;
+  margin: 0 auto;
+  z-index: 11;
+  background-color: transparent;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    right: 0;
+    width: 110%;
+    height: 50px;
+    content: "";
+    z-index: 1;
+    background-color: var(--light-blue);
+  }
+}
