@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-const LeadContainer = () => (
-  <div className="lead-container">
+const LeadInfo = () => (
+  <div className="lead-info">
     <div className="container">
       <div className="avatar-wrapper">
         <div className="avatar-bg avatar-bg-animation">
@@ -55,4 +55,4 @@ const LeadContainer = () => (
   </div>
 );
 
-export default LeadContainer;
+export default LeadInfo;
