@@ -1,6 +1,6 @@
-@import "./animations";
-@import "./slot";
-@import "./employer-info";
+@import "animations";
+@import "slot";
+@import "employer-info";
 
 .employment-history {
   position: relative;
@@ -8,6 +8,10 @@
 
   .short-info {
     position: relative;
+    height: 100%;
+    padding: 0.5em 1em;
+    border-radius: 18px;
+    border-left: 4px solid var(--red);
 
     &:hover {
       .show-projects {

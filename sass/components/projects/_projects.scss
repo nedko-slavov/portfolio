@@ -1,3 +1,5 @@
+@import "animations";
+
 .projects {
   position: relative;
 
@@ -92,45 +94,5 @@
     opacity: 0.9;
     transform-origin: center;
     transform: rotateZ(360deg);
-  }
-}
-
-.project-desc-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 0.5s both 7.5s linear 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both 3.5s linear 1 normal;
-  }
-}
-
-.section-title-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 0.5s both 7s linear 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both 3s linear 1 normal;
-  }
-}
-
-.img-container-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 0.5s both 6.5s linear 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both 2.5s linear 1 normal;
-  }
-}
-
-.try-it-now-animation {
-  @include bp($bp-desktop) {
-    animation: opacity 0.5s both 8s linear 1 normal;
-  }
-
-  @include bp($bp-mobile) {
-    animation: opacity 0.5s both 3s linear 1 normal;
   }
 }

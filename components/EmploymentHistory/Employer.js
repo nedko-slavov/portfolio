@@ -11,26 +11,24 @@ const Employer = ({
   const isClickable = !(employerName === 'HiEnd Publishing' || employerName === '“Tema” magazine' || employerName === 'Lambadjiev Standart');
 
   return (
-    <div className="employer-info-wrapper">
-      <div className="card short-info">
-        {isClickable ? (
-          <button type="button" onClick={handleClick}>
-            <EmployerContent
-              employerName={employerName}
-              period={period}
-              position={position}
-            />
-            <span className="show-projects">Show Projects</span>
-          </button>
-
-        ) : (
+    <div className="card short-info">
+      {isClickable ? (
+        <button type="button" onClick={handleClick}>
           <EmployerContent
             employerName={employerName}
             period={period}
             position={position}
           />
-        )}
-      </div>
+          <span className="show-projects">Show Projects</span>
+        </button>
+
+      ) : (
+        <EmployerContent
+          employerName={employerName}
+          period={period}
+          position={position}
+        />
+      )}
     </div>
   );
 };
