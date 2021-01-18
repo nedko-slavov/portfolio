@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import TryItSVG from './TryItSVG';
 import RocketSVG from './RocketSVG';
 import GithubSVG from './GithubSVG';
 
-const redirectDelay = () => {
-  setTimeout(() => {
-    window.location.href = '/builder';
-  }, 1500);
+const redirect = () => {
+  window.location.href = '/builder';
+};
+
+const rocketLauncher = (isRocketLounched) => {
+  const rocketLaunch = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(isRocketLounched);
+    }, 1500);
+  });
+
+  rocketLaunch.then((launched) => {
+    if (launched) redirect();
+  });
 };
 
 const Projects = () => {
   const [isRocketLounched, setRoketLounch] = useState(false);
 
   useEffect(() => {
-    if (isRocketLounched) {
-      redirectDelay();
-
-      setTimeout(() => {
-        setRoketLounch(false);
-      }, 1500);
-    }
+    rocketLauncher(isRocketLounched);
   }, [isRocketLounched]);
 
   return (
