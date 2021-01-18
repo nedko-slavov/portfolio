@@ -2,32 +2,32 @@
 @import "slot";
 @import "employer-info";
 
+.short-info {
+  position: relative;
+  height: 100%;
+  padding: 0.5em 1em;
+  border-radius: 18px;
+  border-left: 4px solid var(--red);
+
+  &:hover {
+    .show-projects {
+      color: var(--brand);
+    }
+  }
+}
+
 .employment-history {
   position: relative;
   z-index: 4;
 
-  .short-info {
-    position: relative;
-    height: 100%;
-    padding: 0.5em 1em;
-    border-radius: 18px;
-    border-left: 4px solid var(--red);
-
-    &:hover {
-      .show-projects {
-        color: var(--brand);
-      }
-    }
-
-    button {
-      outline: none;
-      text-align: left;
-      font-family: inherit;
-      font-size: inherit;
-      color: inherit;
-      border: none;
-      background-color: transparent;
-    }
+  button {
+    outline: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    background-color: transparent;
   }
 
   .section-title {
@@ -45,6 +45,14 @@
     font-size: 0.74em;
     color: var(--red);
     transition: all 0.3s ease-in-out;
+  }
+
+  .clickable {
+    @extend .short-info;
+
+    &:hover {
+      animation: border-hover 0.5s forwards 1 linear alternate;
+    }
   }
 
   @include bp($bp-desktop) {
@@ -70,7 +78,6 @@
     }
 
     .card {
-      cursor: pointer;
       transition: all 0.3s ease-in-out;
     }
 
@@ -90,14 +97,6 @@
       &:nth-child(3) {
         .card {
           animation: border 10s infinite 10s linear alternate;
-        }
-      }
-
-      &:nth-last-child(n + 4) {
-        .card {
-          &:hover {
-            animation: border-hover 0.5s forwards 1 linear alternate;
-          }
         }
       }
 

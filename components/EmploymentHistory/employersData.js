@@ -5,6 +5,7 @@ export default [
     period: '04.2016 - 02.2020',
     position: 'frontend developer',
     description: 'All projects below are builded with Raketa CMS',
+    isClickable: true,
     projects: [
       {
         id: '1wd',
@@ -62,6 +63,7 @@ export default [
     period: '10.2015 - 01.2016',
     position: 'frontend developer',
     description: '',
+    isClickable: true,
     projects: [
       {
         id: '1bdfbd',
@@ -77,6 +79,7 @@ export default [
     period: '05.2013 - 10.2015',
     position: 'frontend developer',
     description: '',
+    isClickable: true,
     projects: [
       {
         id: '1berbs',
@@ -99,6 +102,7 @@ export default [
     position: 'graphic designer',
     description: '',
     projects: [],
+    isClickable: false,
   },
   {
     id: 'tema',
@@ -107,6 +111,7 @@ export default [
     position: 'graphic designer',
     projects: [],
     description: '',
+    isClickable: false,
   },
   {
     id: 'lambadjiev',
@@ -115,5 +120,6 @@ export default [
     position: 'graphic designer',
     projects: [],
     description: '',
+    isClickable: false,
   },
 ];

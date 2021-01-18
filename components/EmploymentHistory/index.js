@@ -41,6 +41,7 @@ const EmploymentHistory = () => {
                 employerName={employer.name}
                 period={employer.period}
                 position={employer.position}
+                isClickable={employer.isClickable}
                 handleClick={() => setEmployerInfo({ company: employer.id, animationClass: 'slide-show' })}
               />
             </div>

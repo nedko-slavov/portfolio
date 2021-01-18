@@ -19,7 +19,7 @@ const Projects = () => {
 
       setTimeout(() => {
         setRoketLounch(false);
-      }, 1510);
+      }, 1500);
     }
   }, [isRocketLounched]);
 
