@@ -37,13 +37,11 @@ const Projects = () => {
                 <TryItSVG />
               </div>
 
-              <Link href="/builder">
-                <a onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}>
-                  <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
-                    <RocketSVG />
-                  </div>
-                </a>
-              </Link>
+              <a href="/builder" onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}>
+                <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
+                  <RocketSVG />
+                </div>
+              </a>
             </div>
           </div>
 
