@@ -13,7 +13,7 @@ const Project = ({ url, image, clientName }) => (
       />
     </a>
 
-    <div className="project-desk">
+    <div className="project-desc">
       <h5>{clientName}</h5>
     </div>
   </div>
