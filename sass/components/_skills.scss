@@ -1,12 +1,3 @@
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes scale {
   0% {
     transform: scale(0.5);
@@ -17,26 +8,49 @@
   }
 }
 
+.skills-warpper-animation {
+  @include bp($bp-mobile) {
+    animation: opacity 0.5s both linear 1.5s 1 normal;
+  }
+}
+
+.skills-title-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 0.5s both linear 5s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 0.5s both linear 2s 1 normal;
+  }
+}
+
+.skill-animation {
+  @include bp($bp-desktop) {
+    animation: opacity 1s both linear 6s 1 normal,
+      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
+  }
+
+  @include bp($bp-mobile) {
+    animation: opacity 1s both linear 2.5s 1 normal,
+      scale 0.5s both cubic-bezier(0.075, 0.82, 0.165, 1) 2.5s 1 normal;
+  }
+}
+
 .skills-warpper {
   background: var(--white);
 
   .section-title {
-    opacity: 0;
+    opacity: 1;
   }
 
   @include bp($bp-desktop) {
     padding: 0 0 var(--spacing-lg) 0;
-
-    .section-title {
-      animation: opacity 0.5s forwards linear 5s 1 normal;
-    }
   }
 
   @include bp($bp-mobile) {
     padding: var(--spacing-md) var(--gutter);
     background-color: var(--red);
-    opacity: 0;
-    animation: opacity 0.5s forwards linear 1.5s 1 normal;
+    opacity: 1;
 
     .container {
       padding-right: 0;
@@ -45,7 +59,6 @@
 
     .section-title {
       color: var(--white);
-      animation: opacity 0.5s forwards linear 2s 1 normal;
     }
   }
 }
@@ -61,22 +74,8 @@
     margin-top: 1em;
     margin-right: 1em;
     margin-bottom: 0;
-    opacity: 0;
+    opacity: 1;
     background-color: var(--light-blue);
     border-radius: 10px;
-  }
-
-  @include bp($bp-desktop) {
-    .skill {
-      animation: opacity 1s forwards linear 6s 1 normal,
-        scale 0.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1) 6s 1 normal;
-    }
-  }
-
-  @include bp($bp-mobile) {
-    .skill {
-      animation: opacity 1s forwards linear 2.5s 1 normal,
-        scale 0.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1) 2.5s 1 normal;
-    }
   }
 }
