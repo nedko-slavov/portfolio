@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TryItSVG from './TryItSVG';
 import RocketSVG from './RocketSVG';
 import GithubSVG from './GithubSVG';
@@ -7,26 +7,36 @@ const redirect = () => {
   window.location.href = '/builder';
 };
 
-const rocketLauncher = (isRocketLounched) => {
+const rocketLauncher = (isRocketLaunched) => {
   const rocketLaunch = new Promise((resolve) => {
-    if (isRocketLounched) {
-      setTimeout(() => {
-        resolve();
-      }, 1500);
-    }
+    setTimeout(() => {
+      resolve(isRocketLaunched);
+    }, 1500);
   });
 
-  rocketLaunch.then(() => {
-    redirect();
+  rocketLaunch.then((launched) => {
+    if (launched) {
+      return redirect();
+    }
+
+    throw new Error('something went wrong');
+  }).catch((error) => {
+    console.log(error.message);
   });
 };
 
 const Projects = () => {
-  const [isRocketLounched, setRoketLounch] = useState(false);
+  const [isRocketLaunched, setRoketLounch] = useState(false);
+
+  const initialRender = useRef(true);
 
   useEffect(() => {
-    rocketLauncher(isRocketLounched);
-  }, [isRocketLounched]);
+    if (initialRender.current) {
+      initialRender.current = false;
+    } else {
+      rocketLauncher(isRocketLaunched);
+    }
+  }, [isRocketLaunched]);
 
   return (
     <div className="projects">
@@ -42,8 +52,8 @@ const Projects = () => {
                 <TryItSVG />
               </div>
 
-              <a href="/builder" onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLounched); }}>
-                <div className={`rocket rocket-animation ${isRocketLounched ? 'rocket-lounch' : ''}`}>
+              <a href="/builder" onClick={(e) => { e.preventDefault(); setRoketLounch(!isRocketLaunched); }}>
+                <div className={`rocket rocket-animation ${isRocketLaunched ? 'rocket-lounch' : ''}`}>
                   <RocketSVG />
                 </div>
               </a>
