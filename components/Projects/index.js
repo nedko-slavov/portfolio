@@ -9,13 +9,15 @@ const redirect = () => {
 
 const rocketLauncher = (isRocketLounched) => {
   const rocketLaunch = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(isRocketLounched);
-    }, 1500);
+    if (isRocketLounched) {
+      setTimeout(() => {
+        resolve();
+      }, 1500);
+    }
   });
 
-  rocketLaunch.then((launched) => {
-    if (launched) redirect();
+  rocketLaunch.then(() => {
+    redirect();
   });
 };
 
