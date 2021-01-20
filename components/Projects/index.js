@@ -8,21 +8,15 @@ const redirect = () => {
 };
 
 const rocketLauncher = (isRocketLaunched) => {
-  const rocketLaunch = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(isRocketLaunched);
-    }, 1500);
-  });
-
-  rocketLaunch.then((launched) => {
-    if (launched) {
-      return redirect();
+  setTimeout(() => {
+    try {
+      if (!isRocketLaunched) throw new Error('something went wrong');
+    } catch (error) {
+      console.log(error.message);
+    } finally {
+      redirect();
     }
-
-    throw new Error('something went wrong');
-  }).catch((error) => {
-    console.log(error.message);
-  });
+  }, 1500);
 };
 
 const Projects = () => {
