@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Employer from './Employer';
 import CompanyInfo from './CompanyInfo';
 import employersData from './employersData';
+import { Container, Row, Column } from '../layout';
 
 const EmploymentHistory = () => {
   const [employerInfo, setEmployerInfo] = useState({ company: 'raketa', animationClass: '' });
@@ -11,7 +12,7 @@ const EmploymentHistory = () => {
       <div className="slot-wrapper" />
       <div className="slot-shadow" />
 
-      <div className="container employment-history-cnt">
+      <Container className="employment-history-cnt">
         <div className="section-title-wrapper">
           <h4 className="section-title">Employment History</h4>
         </div>
@@ -34,9 +35,9 @@ const EmploymentHistory = () => {
           ))}
         </div>
 
-        <div className="row spacing-top-sm employers">
+        <Row className="spacing-top-sm employers">
           {employersData.map((employer) => (
-            <div key={employer.id} className="col-4">
+            <Column key={employer.id} colWidth="4">
               <Employer
                 employerName={employer.name}
                 period={employer.period}
@@ -44,10 +45,10 @@ const EmploymentHistory = () => {
                 isClickable={employer.isClickable}
                 handleClick={() => setEmployerInfo({ company: employer.id, animationClass: 'slide-show' })}
               />
-            </div>
+            </Column>
           ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import TryItSVG from './TryItSVG';
 import RocketSVG from './RocketSVG';
 import GithubSVG from './GithubSVG';
+import { Container, Row, Column } from '../layout';
 
 const redirect = () => {
   window.location.href = '/builder';
@@ -34,13 +35,13 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      <div className="container">
+      <Container>
         <div className="spacing-bottom-sm">
           <h4 className="section-title section-title-animation">Projects</h4>
         </div>
 
-        <div className="row">
-          <div className="col-6">
+        <Row>
+          <Column colWidth="6">
             <div className="img-container img-container-animation">
               <div className="try-it-now try-it-now-animation">
                 <TryItSVG />
@@ -52,9 +53,9 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-          </div>
+          </Column>
 
-          <div className="col-6 project project-desc-animation">
+          <Column colWidth="6" className="roject project-desc-animation">
             <div className="project-description">
               <div className="description-inner">
                 <h5>Raketa CMS</h5>
@@ -81,9 +82,9 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </Column>
+        </Row>
+      </Container>
     </div>
   );
 };

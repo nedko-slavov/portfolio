@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import { Container, Row, Column } from './layout';
 
 const LeadInfo = () => (
   <div className="lead-info">
-    <div className="container">
+    <Container>
       <div className="avatar-wrapper">
         <div className="avatar-bg avatar-bg-animation">
           <Image
@@ -20,8 +21,8 @@ const LeadInfo = () => (
       <div className="lead-text lead-text-animation">
         <h3>Nedko Slavov</h3>
 
-        <div className="row">
-          <div className="col-4 education-col">
+        <Row>
+          <Column colWidth="4" className="education-col">
             <h4 className="title">Education</h4>
             <ul>
               <li>
@@ -37,9 +38,9 @@ const LeadInfo = () => (
                 2003 - 2007
               </li>
             </ul>
-          </div>
+          </Column>
 
-          <div className="col-4">
+          <Column colWidth="4">
             <h4 className="title">Contact</h4>
             <p>
               <strong>tel: </strong>
@@ -48,10 +49,10 @@ const LeadInfo = () => (
               <strong>email: </strong>
               n.p.slavov@gmail.com
             </p>
-          </div>
-        </div>
+          </Column>
+        </Row>
       </div>
-    </div>
+    </Container>
   </div>
 );
 

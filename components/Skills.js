@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from './layout';
 
 const skills = [
   { id: 'sad', name: 'CSS3' },
@@ -19,14 +20,14 @@ const skills = [
 
 const Skills = () => (
   <div className="skills-warpper skills-warpper-animation">
-    <div className="container">
+    <Container>
       <h4 className="section-title skills-title-animation">Skills and Tools</h4>
       <ul className="skills spacing-top-sm">
         {skills.map((skill) => (
           <li key={skill.id} className="skill skill-animation">{skill.name}</li>
         ))}
       </ul>
-    </div>
+    </Container>
   </div>
 );
 

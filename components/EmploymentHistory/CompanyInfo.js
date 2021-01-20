@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Project from './Project';
+import { Row, Column } from '../layout';
 
 const CompanyInfo = ({ employer }) => {
   const { projects, name, description } = employer;
@@ -18,17 +19,17 @@ const CompanyInfo = ({ employer }) => {
           {description && <p>All projects below are builded with Raketa CMS</p>}
         </div>
 
-        <div className="projects-row row">
+        <Row className="projects-row">
           {projects.map((project) => (
-            <div key={project.id} className="col-6">
+            <Column key={project.id} colWidth="6">
               <Project
                 url={project.url}
                 image={project.image}
                 clientName={project.clientName}
               />
-            </div>
+            </Column>
           ))}
-        </div>
+        </Row>
       </div>
     </div>
   );
