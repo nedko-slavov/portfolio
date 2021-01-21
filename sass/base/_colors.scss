@@ -10,11 +10,20 @@
   --lighter-gray: #edf2f4;
   --white: #f1faee;
   --true-white: #fff;
+  --black-opacity-03: rgba(0, 0, 0, 0.3);
 
-  --light-blue: #a8dadc;
   --blue: #457b9d;
+  --light-blue: #a8dadc;
+  --lighter-blue: #c2e5e7;
+  --lightest-blue: #b1d9db;
   --dark-blue: #1d3557;
+  --blue-opacity-07: rgba(69, 123, 157, 0.07);
+
   --red: #e76f51;
+  --red-opacity-04: rgba(231, 111, 81, 0.4);
+
+  --light-beige: #ccd1bc;
+  --dark-beige: #b8bca9;
 
   --success: #96d03a;
   --error: var(--red);

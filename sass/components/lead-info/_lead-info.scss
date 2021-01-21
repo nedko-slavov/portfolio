@@ -40,12 +40,16 @@
       width: 100%;
       height: 100%;
       z-index: 3;
-      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 8px var(--black-opacity-03);
     }
 
     &:after {
       z-index: 0;
-      background-image: linear-gradient(140deg, var(--white) 30%, #ccd1bc 80%);
+      background-image: linear-gradient(
+        140deg,
+        var(--white) 30%,
+        var(--light-beige) 80%
+      );
     }
   }
 
@@ -71,7 +75,11 @@
     height: 5px;
     width: 1200px;
     content: "";
-    background-image: linear-gradient(to right, #ccd1bc, var(--white) 90%);
+    background-image: linear-gradient(
+      to right,
+      var(--light-beige),
+      var(--white) 90%
+    );
   }
 
   .lead-text {

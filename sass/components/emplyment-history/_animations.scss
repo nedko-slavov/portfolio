@@ -1,6 +1,6 @@
 @keyframes border {
   0% {
-    border-left-color: rgba(231, 111, 81, 0.4);
+    border-left-color: var(--red-opacity-04);
   }
   100% {
     border-left-color: rgba(231, 111, 81, 0);
@@ -9,7 +9,7 @@
 
 @keyframes border-hover {
   0% {
-    border-left-color: rgba(231, 111, 81, 0.4);
+    border-left-color: var(--red-opacity-04);
   }
   100% {
     border-left-color: var(--brand);

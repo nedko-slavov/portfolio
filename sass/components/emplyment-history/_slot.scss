@@ -7,7 +7,7 @@
   width: var(--container-width);
   height: 40px;
   margin: 0 auto;
-  background-color: #c2e5e7;
+  background-color: var(--lighter-blue);
 
   &:before,
   &:after {
@@ -17,17 +17,16 @@
     height: 43px;
     content: "";
     top: 17px;
+    background-color: var(--lightest-blue);
   }
 
   &:before {
     left: -12px;
-    background-color: #b1d9db;
     transform: skewY(-70deg);
   }
 
   &:after {
     right: -12px;
-    background-color: #b1d9db;
     transform: skewY(70deg);
   }
 }
@@ -42,7 +41,7 @@
   margin: 0 auto;
   z-index: 11;
   background-color: transparent;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -5px 10px var(--black-opacity-03);
   pointer-events: none;
 
   &:before {
