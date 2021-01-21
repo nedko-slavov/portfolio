@@ -1,47 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Project from './Project';
-import { Row, Column } from '../layout';
+import employersData from './employersData';
+import CompanyInfoContent from './CompanyInfoContent';
 
-const CompanyInfo = ({ employer }) => {
-  const { projects, name, description } = employer;
+const CompanyInfo = ({ employerInfo, onClose }) => (
+  <div className={`employer-info ${employerInfo.animationClass}`}>
+    <button
+      type="button"
+      className="close close-icon"
+      aria-label="close"
+      onClick={onClose}
+    />
 
-  return (
-    <div className="spacing-top">
-      <div className="projects-wrapper">
-        <div className="spacing-bottom-sm">
-          <h4 className="company-name">
-            {name}
-            &nbsp;
-            Projects
-          </h4>
-
-          {description && <p>All projects below are builded with Raketa CMS</p>}
-        </div>
-
-        <Row className="projects-row">
-          {projects.map((project) => (
-            <Column key={project.id} colWidth="6">
-              <Project
-                url={project.url}
-                image={project.image}
-                clientName={project.clientName}
-              />
-            </Column>
-          ))}
-        </Row>
-      </div>
-    </div>
-  );
-};
-
-CompanyInfo.defaultProps = {
-  description: '',
-};
+    {employersData.map((employer) => (
+      employerInfo.company === employer.id && (
+        <CompanyInfoContent
+          key={employer.id}
+          employer={employer}
+        />
+      )
+    ))}
+  </div>
+);
 
 CompanyInfo.propTypes = {
-  employer: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  description: PropTypes.string,
+  employerInfo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default CompanyInfo;
