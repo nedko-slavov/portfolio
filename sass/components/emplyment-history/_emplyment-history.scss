@@ -5,14 +5,24 @@
 .short-info {
   position: relative;
   height: 100%;
-  padding: 0.5em 1em;
-  border-radius: 18px;
-  border-left: 4px solid var(--red);
 
   &:hover {
     .show-projects {
       color: var(--brand);
     }
+  }
+
+  @include bp($bp-desktop) {
+    padding: 0.5em 1em;
+    border-radius: 18px;
+    border-left: 4px solid var(--red);
+  }
+
+  @include bp($bp-mobile) {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
   }
 }
 
@@ -114,13 +124,6 @@
     .slot-shadow,
     .slot-wrapper {
       display: none;
-    }
-
-    .card {
-      margin-bottom: var(--spacing-sm);
-      padding-left: 0;
-      text-align: center;
-      border-left: none;
     }
   }
 }
