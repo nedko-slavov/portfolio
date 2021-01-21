@@ -1,6 +1,6 @@
 import redirect from './redirect';
 
-export default (isRocketLaunched) => {
+const rocketLauncher = (isRocketLaunched) => {
   setTimeout(() => {
     try {
       if (!isRocketLaunched) throw new Error('something went wrong');
@@ -11,3 +11,5 @@ export default (isRocketLaunched) => {
     }
   }, 1500);
 };
+
+export default rocketLauncher;
