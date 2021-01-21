@@ -2,6 +2,7 @@
 
 .projects {
   position: relative;
+  z-index: var(--neutral);
 
   .project {
     position: relative;

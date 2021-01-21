@@ -39,12 +39,11 @@
     &:before {
       width: 100%;
       height: 100%;
-      z-index: 3;
+      z-index: var(--foreground);
       box-shadow: inset 0 0 8px var(--black-opacity-03);
     }
 
     &:after {
-      z-index: 0;
       background-image: linear-gradient(
         140deg,
         var(--white) 30%,
@@ -55,7 +54,7 @@
 
   .avatar {
     position: relative;
-    z-index: 1;
+    z-index: var(--overlay);
   }
 
   .row {
@@ -71,7 +70,7 @@
     position: absolute;
     bottom: 0;
     left: 100px;
-    z-index: 0;
+    z-index: var(--neutral);
     height: 5px;
     width: 1200px;
     content: "";

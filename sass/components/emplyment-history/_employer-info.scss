@@ -1,6 +1,5 @@
 .employer-info {
   margin: 0 auto;
-  z-index: 9;
   background-color: var(--light-beige);
   transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   box-shadow: 7px 2px 10px var(--blue-opacity-07);
@@ -11,7 +10,6 @@
     left: 8px;
     height: 6px;
     width: 100%;
-    z-index: 5;
     content: "";
     background-color: var(--dark-beige);
     transform: skewX(-70deg);
@@ -26,7 +24,7 @@
     top: var(--spacing-md);
     right: var(--spacing-md);
     cursor: pointer;
-    z-index: 1;
+    z-index: var(--overlay);
     font-size: inherit;
     border: none;
     background-color: transparent;
@@ -49,29 +47,6 @@
     position: relative;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
-
-    &:before,
-    &:after {
-      display: none;
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 60px;
-      height: 100%;
-      content: "";
-      border-radius: 50%;
-      background-color: transparent;
-      background-color: var(--brand);
-    }
-
-    &:before {
-      left: -30px;
-      box-shadow: 10px 0px 20px var(--black-opacity-03);
-    }
-    &:after {
-      right: 50px;
-      box-shadow: -10px 0px 20px var(--black-opacity-03);
-    }
   }
 
   .project {
@@ -100,10 +75,11 @@
     top: -40px;
     width: 980px;
     height: 450px;
-    z-index: 1;
+    z-index: var(--neutral);
     animation: bounce 3s linear 9s infinite alternate;
 
     &.slide-show {
+      z-index: var(--overlay);
       animation: show-employer-info 0.2s forwards linear 1 alternate;
     }
 
@@ -121,19 +97,22 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1;
     pointer-events: none;
     opacity: 0;
 
     &.slide-hide {
       opacity: 0;
-      z-index: -1;
+      z-index: var(--background);
     }
 
     &.slide-show {
       opacity: 1;
-      z-index: 7;
+      z-index: var(--modal);
       pointer-events: auto;
+
+      .projects-row {
+        height: 100vh;
+      }
     }
   }
 }

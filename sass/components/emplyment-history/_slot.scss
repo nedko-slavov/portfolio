@@ -3,7 +3,7 @@
   top: -30px;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: var(--background);
   width: var(--container-width);
   height: 40px;
   margin: 0 auto;
@@ -39,7 +39,7 @@
   width: var(--container-width);
   height: 20px;
   margin: 0 auto;
-  z-index: 11;
+  z-index: var(--foreground);
   background-color: transparent;
   box-shadow: 0 -5px 10px var(--black-opacity-03);
   pointer-events: none;
@@ -53,7 +53,7 @@
     width: 110%;
     height: 50px;
     content: "";
-    z-index: 1;
+    z-index: var(--overlay);
     background-color: var(--light-blue);
   }
 }
